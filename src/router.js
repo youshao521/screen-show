@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import index from './routes/index';
-import mainPage from './components/mainPage/index';
+import mainPage from './routes/mainPage';
 Vue.use(Router)
 
 export default new Router({

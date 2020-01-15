@@ -27,9 +27,13 @@ export default {
         textStyle: {
           color: '#CFDDFF'
         },
+        grid: {
+          top: 30,
+          bottom: 130
+        },
         legend: {
-          data: ['2018年', '2019年'],
-          bottom: '5px',
+          data: ['报警数', '处理数'],
+          bottom: 60,
           textStyle: {
             color: '#CFDDFF'
           },
@@ -39,9 +43,10 @@ export default {
             type: 'category',
             axisTick: { show: false },
             axisLabel: {
-              interval: 0
+              interval: 0,
+              rotate: 30
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            data: ['2019.1', '2019.2', '2019.3', '2019.4', '2019.5', '2019.6', '2019.7', '2019.8', '2019.9', '2019.10', '2019.11', '2019.12']
           }
         ],
         yAxis: [
@@ -57,13 +62,13 @@ export default {
         ],
         series: [
           {
-            name: '2018年',
+            name: '报警数',
             type: 'bar',
             barWidth: 8,
             data: [97, 95, 88, 87, 85, 81, 80, 90, 85, 86, 82, 80]
           },
           {
-            name: '2019年',
+            name: '处理数',
             type: 'bar',
             barWidth: 8,
             data: [80, 90, 85, 86, 82, 80, 78, 75, 80, 82, 81, 82]

@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .mainbox {
   height: 1080px;
   width: 2700px;
@@ -51,7 +55,7 @@
   font-size: 24px;
   color: #9DB9FF;
   letter-spacing: 0;
-  text-align: center;
+  padding: 0 55px;
   margin-top: 10px;
 }
 .rect {
@@ -68,8 +72,6 @@
 }
 .itemTitle {
   overflow: hidden;
-  margin: 0;
-  padding: 0;
   li {
     float: left;
     width: 255px;
@@ -101,4 +103,215 @@
   letter-spacing: 0;
   text-align: center;
   line-height: 56px;
+}
+.healthy {
+  padding: 7px 0px 0 65px;
+  li {
+    margin-top: 21px;
+  }
+}
+.healthy-title {
+  opacity: 0.5;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #CFDDFF;
+  letter-spacing: 0;
+}
+.healthy-value {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #C8D8FF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 33px;
+}
+.healthy-unit {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #C8D8FF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 33px;
+}
+.healthy-content {
+  display:inline-block;
+  margin-right: 22px;
+}
+.healthy-color-box {
+  width: 238px;
+  height: 20px;
+  position: relative;
+}
+.healthy-color-shadow {
+  width: 238px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url(../../assets/mainPage/jiankang_di.svg);
+}
+.healthy-color {
+  background: linear-gradient(left, #4813FF, #0AECF9);
+  height: 100%;
+  position: relative;
+}
+.park {
+  margin: 41px auto 0;
+  width: 628px;
+  height: 232px;
+  display: flex;
+  align-items: flex-end;
+}
+.park-item {
+  position: relative;
+  float: left;
+  width: 130px;
+  height: 232px;
+  background-image: linear-gradient(180deg, #13FFE6 0%, #1A116F 100%);
+  margin-right: 36px;
+}
+.park-item:nth-child(4) {
+  margin: 0;
+  background-image: linear-gradient(180deg, #F16743 0%, #43070F 100%);
+}
+.park-item-blue {
+  width: 100%;
+  height: 232px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../../assets/mainPage/kuang_blue.svg);
+}
+.park-item-red {
+  width: 100%;
+  height: 232px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../../assets/mainPage/kuang_red.svg);
+}
+.park-title {
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #CFDDFF;
+  letter-spacing: 0;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: -44px;
+}
+.park-detail {
+  position: absolute;
+  bottom: 13px;
+  width: 100%;
+}
+.park-subtitle {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #FFD7CF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.park-value {
+  text-align: center;
+  color: #CFDDFF;
+}
+.park-value-detail {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #CFDDFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 33px;
+}
+.park-percent {
+  position: absolute;
+  bottom: 161px;
+  width: 100%;
+  text-align: center;
+  color: #CFDDFF;
+  & .percent {
+    font-family: PingFangSC-Semibold;
+    font-size: 32px;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 45px;
+  }
+}
+.map-image {
+  width: 956px;
+  height: 714px;
+  margin: 0 auto;
+  background: url(../../assets/mainPage/map.svg);
+  position: absolute;
+}
+.map-image-item {
+  position: absolute;
+  width: 60px;
+}
+.map-image-title {
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FFEACD;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(13,7,33,0.50);
+}
+.map-image-num {
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #FFEACD;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 28px;
+}
+.map-image-unit {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #FFEACD;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 28px;
+}
+.car-image {
+  height: 292px;
+  width: 630px;
+  position: relative;
+  background: url(../../assets/mainPage/cheliang_bg.svg);
+  margin: 40px auto 0;
+}
+.car-count-normal {
+  width: 90px;
+  height: 42px;
+  background: #06041D;
+  border: 1px solid rgba(207,221,255,0.40);
+  border-radius: 28px;
+  color: #CFDDFF;
+  position: absolute;
+  text-align: center;
+}
+.car-count-jam {
+  width: 90px;
+  height: 42px;
+  background: #06041D;
+  border: 1px solid #F11B1B;
+  border-radius: 28px;
+  color: #FF3C56;
+  position: absolute;
+  text-align: center;
+}
+.car-count {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 40px;
+}
+.car-count-name {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 6px;
 }

@@ -19,12 +19,17 @@
         </div>
       </li>
     </ul>
+    <MapImage />
   </div>
 </template>
 <script>
 import echarts from 'echarts';
+import MapImage from './mapImage.vue';
 export default {
   name: 'Map',
+  components: {
+    MapImage
+  },
   data() {
     return {
       staticList: [

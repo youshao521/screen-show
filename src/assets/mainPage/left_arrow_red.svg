@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="14px" viewBox="0 0 49 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>jiantou8-r</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FF613C" offset="0%"></stop>
+            <stop stop-color="#CFDDFF" stop-opacity="0.9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="数据大屏（全）" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="编组-4备份-4" transform="translate(-347.000000, -295.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M382.017903,294.964309 L396,302 L381.982188,308.964263 L382.017903,294.964309 Z M377.002453,300.951534 L379.002447,300.956636 L378.997351,302.956629 L376.997351,302.951534 L377.002453,300.951534 Z M371.002473,300.936228 L373.002466,300.94133 L372.997371,302.941323 L370.997371,302.936228 L371.002473,300.936228 Z M365.002492,300.920921 L367.002486,300.926023 L366.99739,302.926017 L364.99739,302.920921 L365.002492,300.920921 Z M359.002512,300.905615 L361.002505,300.910717 L360.99741,302.910711 L358.99741,302.905615 L359.002512,300.905615 Z M353.002531,300.890309 L355.002525,300.895411 L354.997429,302.895405 L352.997429,302.890309 L353.002531,300.890309 Z M347.002551,300.875003 L349.002545,300.880105 L348.997449,302.880099 L346.997449,302.875003 L347.002551,300.875003 Z" id="jiantou8-r" transform="translate(371.498724, 301.964286) scale(-1, 1) translate(-371.498724, -301.964286) "></path>
+        </g>
+    </g>
+</svg>

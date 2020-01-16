@@ -35,17 +35,17 @@ export default {
       staticList: [
         {
           title: '合同额',
-          num: 634.5,
+          num: 30,
           unit: '亿元'
         },
         {
           title: '订单总量',
-          num: 2236,
+          num: 8000,
           unit: '个'
         },
         {
           title: '订单完成率',
-          num: 94.1,
+          num: 10,
           unit: '%'
         }
       ],

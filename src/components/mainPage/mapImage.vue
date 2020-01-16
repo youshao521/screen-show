@@ -69,10 +69,32 @@ export default {
     };
   },
   mounted() {
+    this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {
+    clearInterval(this.wanna);
   },
   methods: {
+    changeValue() {
+      this.data = this.data.map((x) => {
+        let obj = {};
+        if (x.name1) {
+          obj = {
+            gasoline: this.sum(28, 32) * this.sum(1, 3),
+            gasoline1: this.sum(28, 32) * this.sum(1, 3)
+          }
+        } else {
+          obj = {
+            gasoline: this.sum(28, 32) * this.sum(1, 3)
+          }
+        }
+        return Object.assign(x, obj);
+      });
+    },
+    sum(m,n) {
+      const num = Math.floor(Math.random()*(m - n) + n);
+      return num;
+    }
   }
 }
 </script>

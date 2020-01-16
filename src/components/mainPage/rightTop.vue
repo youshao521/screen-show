@@ -65,52 +65,76 @@ export default {
           top: 38,
           left: 100,
           name: '入园',
-          value: 300
+          value: 300,
+          min: 270,
+          max: 350
         },
         {
           top: 38,
           left: 244,
           name: '排队',
-          value: 100
+          value: 200,
+          min: 200,
+          max: 250
         },
         {
           top: 38,
           left: 388,
           name: '化验',
-          value: 50
+          value: 40,
+          min: 30,
+          max: 50
         },
         {
           top: 125,
           left: 526,
           name: '卸车',
-          value: 50
+          value: 30,
+          min: 10,
+          max: 40
         },
         {
           top: 212,
           left: 388,
           name: '装车',
-          value: 45
+          value: 50,
+          min: 40,
+          max: 60
         },
         {
           top: 212,
           left: 244,
           name: '出厂',
-          value: 50
+          value: 50,
+          min: 37,
+          max: 57
         },
         {
           top: 212,
           left: 100,
           name: '出园',
-          value: 300
+          value: 70,
+          min: 60,
+          max: 80
         }
       ]
     };
   },
   mounted() {
+    // this.changeValue();
+    this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {
+    clearInterval(this.wanna);
   },
   methods: {
+    changeValue() {
+      this.data = this.data.map((x) => {
+        return Object.assign(x, {
+          value: this.sum(x.min, x.max)
+        });
+      });
+    },
     sum(m,n) {
       const num = Math.floor(Math.random()*(m - n) + n);
       return num;

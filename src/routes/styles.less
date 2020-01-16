@@ -1,0 +1,140 @@
+.box {
+  margin: 0;
+  width: 2700px;
+  height: 1080px;
+  background: url(../assets/production/bg.png);
+  .title {
+    padding-top: 45px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 0 0 60px #007AFF;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 48px 0;
+    .leftCont {
+      width: 698px;
+    }
+    .centerCont {
+      width: 1212px;
+      height: 902px;
+      background: url(../assets/production/chart.png);
+    }
+    .rightCont {
+      width: 656px;
+    }
+  }
+}
+.smtitle {
+    margin: 8px 0 25px;
+    font-size: 24px;
+    color: #9DB9FF;
+  }
+//生产管控-重要运行参数
+.block1 {
+  width: 100%;
+  // height: 520px;
+  padding: 0 22px;
+  .itemsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .items {
+      width: 128px;
+      text-align: center;
+      margin-bottom: 18px;
+      p {
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        color: #9cb2d6;
+        // opacity: 0.4;
+        background: rgba(16,44,108,.4);
+      }
+      span {
+        height: 42px;
+        line-height: 42px;
+        font-size: 20px;
+        color: #57B3FF;
+      }
+    }
+  }
+}
+// 生产管控-操作运行
+.block2 {
+  width: 100%;
+  padding: 25px 22px 0;
+  .itemsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #31415B;
+    border-left: 1px solid #31415B;
+  }
+  .itemBox {
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #31415B;
+    border-right: 1px solid #31415B;
+    height: 106px;
+    width: 50%;
+    .itemTitle {
+      width: 56px;
+      padding-left: 15px;
+      text-align: center;
+      writing-mode: vertical-lr;
+      background: #102c6c;
+      font-size: 14px;
+      color: #9CB2D6;
+      height: 100%;
+    }
+    .itemChart {
+      width: 270px;
+    }
+  }
+}
+// 生产管控-center
+.block3 {
+  position: relative;
+  .showBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 63px 110px 0;
+    font-size: 16px;
+    color: #9CB2D6;
+    .items {
+      .itemValue {
+        font-size: 28px;
+        .itemNum {
+          font-size: 56px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .points {
+    position: absolute;
+    .norPoint {
+      font-size: 14px;
+      color: #FFFFFF;
+      padding: 2px 12px 1px;
+      background: rgba(90,200,250,0.20);
+      border: 1px solid rgba(1,185,222,0.30);
+      border-radius: 12px;
+    }
+    .spePoint {
+      font-size: 14px;
+      color: #9CB2D6;
+      .pointVal {
+        font-size: 16px;
+        .pointNum {
+          color: #7BF970;
+        }
+      }
+    }
+  }
+}

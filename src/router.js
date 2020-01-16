@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import index from './routes/index';
 import mainPage from './routes/mainPage';
 import device from './routes/device';
+import ProductionControl from './routes/productionControl'
 Vue.use(Router)
 
 export default new Router({
@@ -14,6 +15,12 @@ export default new Router({
       component: index,
     },
     {
+      path: '/prodCtrl',
+      name: 'prodCtrl',
+      component: ProductionControl,
+    },
+    {
+      // path: '/TechMgr',
       path: '/mainPage',
       name: 'mainPage',
       component: mainPage,

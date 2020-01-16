@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="167px" height="28px" viewBox="0 0 167 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>椭圆形</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50.7578127%" cy="100.25%" fx="50.7578127%" fy="100.25%" r="100.25%" gradientTransform="translate(0.507578,1.002500),scale(0.163743,1.000000),rotate(-90.000000),scale(1.000000,3.020736),translate(-0.507578,-1.002500)" id="radialGradient-1">
+            <stop stop-color="#387DFF" offset="0%"></stop>
+            <stop stop-color="#312CB6" stop-opacity="0.0977606203" offset="79.1745526%"></stop>
+            <stop stop-color="#3023AE" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="朱斌+junx" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="生产" transform="translate(-2007.000000, -130.000000)" fill="url(#radialGradient-1)">
+            <path d="M2090.05882,157.738027 C2137.27917,157.738027 2175,160.282968 2175,149.508642 C2175,138.734317 2136.72035,130 2089.5,130 C2042.27965,130 2004,138.734317 2004,149.508642 C2004,160.282968 2042.83848,157.738027 2090.05882,157.738027 Z" id="椭圆形"></path>
+        </g>
+    </g>
+</svg>

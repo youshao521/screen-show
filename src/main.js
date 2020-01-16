@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VCharts from 'v-charts'
 import {
-  Menu, Table, Row, Col, Form, Input,
-  Button, Checkbox, Tooltip, Select,
-  Modal, InputNumber, Tree, Pagination, TreeSelect,
+  Menu,Table,Row,Col,Form,Input,
+  Button,Checkbox,Tooltip,Select,
+  Modal,InputNumber,Tree,Pagination,TreeSelect,
 } from 'ant-design-vue'
 import App from './App.vue'
 import router from './router'

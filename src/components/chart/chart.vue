@@ -49,7 +49,7 @@ export default {
       this.renderData(this.options)
     },
     renderData(options) {
-      console.log(options)
+      // console.log(options)
       const opts = JSON.parse(JSON.stringify(options)) // 防止操作源数据
       const { data, type: t, isPer = false } = opts
       data.push(Math.ceil((data[0] + data[1] + data[2]) / 3))

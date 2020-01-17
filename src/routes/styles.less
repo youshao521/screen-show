@@ -43,6 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background:rgba(10,86,249,.05);
     .items {
       width: 128px;
       text-align: center;
@@ -52,7 +53,6 @@
         height: 24px;
         line-height: 24px;
         color: #9cb2d6;
-        // opacity: 0.4;
         background: rgba(16,44,108,.4);
       }
       span {
@@ -129,6 +129,11 @@
     .spePoint {
       font-size: 14px;
       color: #9CB2D6;
+      .progress {
+        position: absolute;
+        width: 10px;
+        background: linear-gradient(270deg, #429321 0%, #72DD0D 100%);
+      }
       .pointVal {
         font-size: 16px;
         .pointNum {
@@ -137,4 +142,127 @@
       }
     }
   }
+}
+// 生产管理-车间
+.block4 {
+  width: 100%;
+  .tabs {
+    display: flex;
+    font-size: 16px;
+    color: #9CB2D6;
+    .tabItem {
+      transition: all .2s;
+      width: 171px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 16px;
+      color: #9CB2D6;
+      text-align: center;
+    }
+    .choosed {
+      font-size: 20px;
+      color: #FFFFFF;
+      background: url(../assets/production/tab_bg.svg);
+    }
+  }
+  .centerTitle {
+    margin: 35px 0 28px;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+  .devicesBox {
+    width: 606px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 12px;
+    color: #9CB2D6;
+    .perBox {
+      position: relative;
+      width: 466px;
+      height: 12px;
+      background: rgba(199,199,204,0.16);
+      border-radius: 6px;
+      .perCurr {
+        transition: all .6s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12px;
+        border-radius: 6px;
+
+      }
+    }
+    .perNum {
+      font-size: 24px;
+    }
+  }
+}
+
+// 生产管理-样品分析
+.block5 {
+  width: 100%;
+  color: #9CB2D6;
+  .itemsBox {
+    display: flex;
+    justify-content: space-between;
+    .chartBox {
+      width: 132px;
+      text-align: center;
+      .chartTitle {
+        font-size: 16px;
+        padding: 30px 0 20px;
+      }
+    }
+    .table {
+      width: 500px;
+      .tableHead {
+        display: flex;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(16,44,108,.4);
+        font-size: 14px;
+        color: #9CB2D6;
+        
+      }
+      .tableCont {
+        width: 100%;
+        height: 236px;
+        overflow: hidden;
+        .tableItem {
+          background: rgba(16,44,108,.15);
+          height: 46px;
+          line-height: 46px;
+          border-bottom: 1px solid #31415B;
+          display: flex;
+          .name {
+            text-decoration: underline;
+            color: #387DFF;
+          }
+          .hint {
+            color: #9CB2D6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab1 {
+  text-indent: 10px;
+  width: 129px;
+}
+.tab2 {
+  width: 128px;
+}
+.tab3 {
+  width: 86px;
+}
+.tab4 {
+  width: 56px;
+}
+.tab5 {
+  margin-right: 14px;
 }

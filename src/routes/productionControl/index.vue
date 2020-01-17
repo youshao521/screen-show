@@ -2,7 +2,7 @@
   <div class='box'>
     <p class='title'>生产管控一体化驾驶舱</p>
     <div class='content'>
-      <div class='leftCont'>
+      <!-- <div class='leftCont'>
         <ImportRunOptsModule :list='runOpts' />
         <ActionRunningModule :list='actionRunning' />
       </div>
@@ -11,15 +11,18 @@
           :list='centerData'
           :points='centerPoints'
         />
-      </div>
+      </div>-->
       <div class='rightCont'>
-        <div>1</div>
+        <WorkshopModule :list='workshops' />
+        <SampleAnalysisModule />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SampleAnalysisModule from './SampleAnalysisModule'
+import WorkshopModule from './WorkshopModule'
 import ActionRunningModule from './ActionRunningModule'
 import ImportRunOptsModule from './ImportRunOptsModule'
 import CenterModule from './CenterModule'
@@ -28,12 +31,15 @@ import { getR } from '../../utils/common'
 export default {
   name: 'ProductionControl',
   components: {
+    SampleAnalysisModule,
+    WorkshopModule,
     ImportRunOptsModule,
     ActionRunningModule,
     CenterModule,
   },
   data() {
     return {
+      workshops: mock.workshops,
       centerPoints: mock.centerPoints,
       centerData: mock.centerData,
       runOpts: mock.runOpts,
@@ -46,7 +52,7 @@ export default {
   methods: {
     init() {
       this.timer1()
-      // this.timer2()
+      this.timer2()
       this.timer3()
     },
     random1(data) {

@@ -30,6 +30,15 @@
         class='spePoint'
         v-else
       >
+        <div
+          :style='{
+          height: i.val*44/100+"px",
+          top:i.progress.top+"px",
+          left:i.progress.left+"px"
+        }'
+          class='progress'
+          v-if='i.progress'
+        />
         <p>{{i.name}}</p>
         <p class='pointVal'>
           <span class='pointNum'>{{i.val}}</span>

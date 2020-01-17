@@ -1,8 +1,105 @@
-/**
- * 生产管控-mock
- */
 
+// 生产管控-样品分析
+export const sampleAnalysis = {
+  times: 32,
+  passRate: 78
+}
+
+// 生产管控-车间能耗图表配置
+export const workshopChartOpts = {
+  name: ['2018年','2019年'],
+  x: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+}
+
+// 生产管控-mock
 export const mock = {
+  workshops: [
+    {
+      name: '炼化A车间',
+      devices: [{
+        name: '装置A',
+        val: 80
+      },{
+        name: '装置B',
+        val: 90
+      },{
+        name: '装置C',
+        val: 96
+      },{
+        name: '装置D',
+        val: 88
+      },
+      ],
+      energyCost: [{
+        data: [90,80,70,66,55,48,80,80,75,87,79,76]
+      },{
+        data: [55,87,90,80,70,66,82,75,48,87,79,76]
+      }]
+    },{
+      name: '炼化B车间',
+      devices: [{
+        name: '装置A',
+        val: 15
+      },{
+        name: '装置B',
+        val: 80
+      },{
+        name: '装置C',
+        val: 80
+      },{
+        name: '装置D',
+        val: 99
+      },
+      ],
+      energyCost: [{
+        data: [80,70,66,55,48,80,80,75,87,79,76,80]
+      },{
+        data: [87,90,80,82,75,48,87,79,76,70,66,55]
+      }]
+    },{
+      name: '炼化C车间',
+      devices: [{
+        name: '装置A',
+        val: 80
+      },{
+        name: '装置B',
+        val: 90
+      },{
+        name: '装置C',
+        val: 96
+      },{
+        name: '装置D',
+        val: 88
+      },
+      ],
+      energyCost: [{
+        data: [90,80,70,66,55,48,80,80,75,87,79,76]
+      },{
+        data: [55,87,90,80,70,66,82,75,48,87,79,76]
+      }]
+    },{
+      name: '炼化D车间',
+      devices: [{
+        name: '装置A',
+        val: 15
+      },{
+        name: '装置B',
+        val: 80
+      },{
+        name: '装置C',
+        val: 80
+      },{
+        name: '装置D',
+        val: 99
+      },
+      ],
+      energyCost: [{
+        data: [80,70,66,55,48,80,80,75,87,79,76,80]
+      },{
+        data: [87,90,80,82,75,48,87,79,76,70,66,55]
+      }]
+    }
+  ],
   centerPoints: [
     {
       name: '尿素和甲醇混合液',
@@ -23,6 +120,39 @@ export const mock = {
       name: 'DMC',
       top: 699,
       left: 1124
+    },
+    {
+      name: 'LIC3001',
+      val: 72.2,
+      unit: '%',
+      top: 585,
+      left: 480,
+      progress: {
+        top: 33,
+        left: -30
+      }
+    },
+    {
+      name: 'LIC3211',
+      val: 60.1,
+      unit: '%',
+      top: 614,
+      left: 632,
+      progress: {
+        top: 10,
+        left: -32
+      }
+    },
+    {
+      name: 'LIC3026',
+      val: 46.3,
+      unit: '%',
+      top: 611,
+      left: 949,
+      progress: {
+        top: 19,
+        left: 66
+      }
     },
     {
       name: 'FIC1032',

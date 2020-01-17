@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1001px" height="901px" viewBox="0 0 1001 901" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>frame_slice</title>
+    <desc>Created with Sketch.</desc>
+    <g id="数据大屏（全）" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-867.000000, -131.000000)">
+            <g id="frame" transform="translate(867.000000, 131.000000)">
+                <polygon id="矩形" stroke="#2A68FF" fill-opacity="0.704845935" fill="#000000" opacity="0.300000012" points="1 1 1000 1 1000 901 1 901"></polygon>
+                <path d="M19,899 L19,901 L1,901 L1,883 L3.5,883 L3.5,899 L19,899 Z M1001,883 L1001,901 L983,901 L983,899 L999,899 L999,883 L1001,883 Z M18,0 L18,2 L2,2 L2,18 L0,18 L0,0 L18,0 Z M1001,0 L1001,18 L999,18 L999,2 L983,2 L983,0 L1001,0 Z" id="形状" fill="#1B5DFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

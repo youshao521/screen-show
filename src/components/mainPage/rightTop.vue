@@ -1,7 +1,7 @@
 
 <template>
   <div class="smallPage" :style="{ height: '45%' }">
-    <div class="subTitle">车辆调度</div>
+    <div class="subTitle" :style="{ 'text-align': 'center' }">车辆调度</div>
     <div class="car-image">
       <div
         v-for="item in data"

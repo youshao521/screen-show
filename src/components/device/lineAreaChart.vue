@@ -64,6 +64,7 @@ export default {
         series: [{
           data: [5, 8, 3, 15, 20, 3, 5, 3, 16, 23, 25],
           type: 'line',
+          smooth: true,
           lineStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
               offset: 0,

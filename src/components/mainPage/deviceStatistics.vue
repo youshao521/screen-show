@@ -5,8 +5,8 @@
       :columns="columns"
       :pagination="false"
     >
-      <template slot="day" slot-scope="text">
-        <template v-if="text === maxDay">
+      <template slot="day" slot-scope="text, record">
+        <template v-if="record.maxDay">
           <span :style="{ color: 'red' }">
             {{text}}
           </span>
@@ -17,8 +17,8 @@
           </span>
         </template>
       </template>
-      <template slot="month" slot-scope="text">
-        <template v-if="text === maxMonth">
+      <template slot="month" slot-scope="text, record">
+        <template v-if="record.maxMonth">
           <span :style="{ color: 'red' }">
             {{text}}
           </span>
@@ -41,37 +41,51 @@ export default {
           key: '0',
           name: '加氢裂化',
           day: 0.61,
-          month: 2.08
+          month: 2.08,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '1',
           name: '延迟焦化',
           day: 0.90,
-          month: 3.69
+          month: 3.69,
+          maxDay: true,
+          maxMonth: true,
         }, {
           key: '2',
           name: '催化裂化',
           day: 0.06,
-          month: 0.15
+          month: 0.15,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '3',
           name: '气体脱硫',
           day: 0.69,
-          month: 3.08
+          month: 3.08,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '4',
           name: '污水处理',
           day: 0.71,
-          month: 1.34
+          month: 1.34,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '5',
           name: '气体分馏',
           day: 0.04,
-          month: 0.17
+          month: 0.17,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '6',
           name: '常减压',
           day: 0.13,
-          month: 1.53
+          month: 1.53,
+          maxDay: false,
+          maxMonth: false,
         }
       ],
       backup: [
@@ -79,37 +93,51 @@ export default {
           key: '0',
           name: '加氢裂化',
           day: 0.61,
-          month: 2.08
+          month: 2.08,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '1',
           name: '延迟焦化',
           day: 0.90,
-          month: 3.69
+          month: 3.69,
+          maxDay: true,
+          maxMonth: true,
         }, {
           key: '2',
           name: '催化裂化',
           day: 0.06,
-          month: 0.15
+          month: 0.15,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '3',
           name: '气体脱硫',
           day: 0.69,
-          month: 3.08
+          month: 3.08,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '4',
           name: '污水处理',
           day: 0.71,
-          month: 1.34
+          month: 1.34,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '5',
           name: '气体分馏',
           day: 0.04,
-          month: 0.17
+          month: 0.17,
+          maxDay: false,
+          maxMonth: false,
         }, {
           key: '6',
           name: '常减压',
           day: 0.13,
-          month: 1.53
+          month: 1.53,
+          maxDay: false,
+          maxMonth: false,
         }
       ],
       columns: [
@@ -134,42 +162,45 @@ export default {
     };
   },
   created() {
-    // setTimeout(this.changeValue, 3000)
-    // this.changeValue();
-    // this.wanna = setInterval(this.changeValue, 3000);
+    this.wanna = setInterval(this.changeValue, 24 * 60 * 60 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);
   },
   methods: {
     changeValue() {
-      this.dataSource = this.dataSource.map((item, index) => {
+      const arr = this.dataSource.map((item, index) => {
         const random = (0.5-(Math.random()*1)).toFixed(1);
         return {
           key: item.key,
           name: item.name,
-          day: (this.backup[index].day + parseFloat(random)).toFixed(1),
-          month: (this.backup[index].month + parseFloat(random)).toFixed(1),
+          day: parseFloat((this.backup[index].day + parseFloat(random)).toFixed(1)),
+          month: parseFloat((this.backup[index].month + parseFloat(random)).toFixed(1)),
+          maxDay: false,
+          maxMonth: false,
         }
       });
+      const maxDay = this.maxNumber(arr, 'day');
+      const maxMonth = this.maxNumber(arr, 'month');
+      // 最大天数变红
+      arr.filter(x => x.day === maxDay).forEach((x) => {
+        x.maxDay = true;
+      });
+      arr.filter(x => x.month === maxMonth).forEach((x) => {
+        x.maxMonth = true;
+      });
+      this.dataSource = arr;
+    },
+    maxNumber(tArr, key) {
+      const arr = [];
+      tArr.forEach((item) => {
+        arr.push(item[key]);
+      });
+      return Math.max(...arr);
     }
   },
   computed: {
-    maxDay() {
-      const arr = [];
-      this.dataSource.forEach((item) => {
-        arr.push(item.day);
-      });
-      return Math.max(...arr);
-    },
-    maxMonth() {
-      const arr = [];
-      this.dataSource.forEach((item) => {
-        arr.push(item.month);
-      });
-      console.log(Math.max(...arr))
-      return Math.max(...arr);
-    }
+    
   }
 };
 </script>
@@ -179,8 +210,7 @@ export default {
     margin: 54px auto 0;
   }
   .table >>> .ant-table-thead {
-    opacity: 0.5;
-    background-image: linear-gradient(269deg, #4813FF 0%, #0AECF9 100%);
+    background-image: linear-gradient(269deg, rgba(72,19,255,0.1) 0%, rgba(10,236,249,0.1) 100%);
   }
   .table >>> .ant-table-thead > tr > th {
     padding: 0;

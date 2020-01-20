@@ -4,6 +4,7 @@
     <ul class="itemTitle">
       <li
         v-for="item in staticList"
+        :key="item.title"
       >
         <div class="iTitle">{{item.title}}</div>
         <div :style="{ 'text-align': 'center' }">
@@ -25,6 +26,7 @@
 <script>
 import echarts from 'echarts';
 import MapImage from './mapImage.vue';
+import page from '../../../data/wisdom';
 export default {
   name: 'Map',
   components: {
@@ -32,26 +34,10 @@ export default {
   },
   data() {
     return {
-      staticList: [
-        {
-          title: '合同额',
-          num: 30,
-          unit: '亿元'
-        },
-        {
-          title: '订单总量',
-          num: 8000,
-          unit: '个'
-        },
-        {
-          title: '订单完成率',
-          num: 10,
-          unit: '%'
-        }
-      ],
-      standard: 100.3,
-      useValue: 100.3,
-      float: 5,
+      staticList: page.mapData.staticList,
+      standard: page.mapData.standard,
+      useValue: page.mapData.standard,
+      float: page.mapData.float,
       min: 0,
       max: 0
     };
@@ -59,7 +45,6 @@ export default {
   mounted() {
     this.min = this.standard - this.float;
     this.max = this.standard + this.float;
-    this.changeValue();
     this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {

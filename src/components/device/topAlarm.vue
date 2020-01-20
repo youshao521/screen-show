@@ -8,38 +8,12 @@
   </div>
 </template>
 <script>
+import page from '../../../data/device';
 export default {
   name: 'TopAlarm',
   data() {
     return {
-      dataSource: [
-        {
-          key: '0',
-          name: '一焦化',
-          day: '2/25',
-          month: '92%'
-        }, {
-          key: '1',
-          name: '碳五分离',
-          day: '23/25',
-          month: '8%'
-        }, {
-          key: '2',
-          name: '酚水分离',
-          day: '2/28',
-          month: '92.8%'
-        }, {
-          key: '3',
-          name: '废氢回收',
-          day: '18/18',
-          month: '100%'
-        }, {
-          key: '4',
-          name: '一空压站',
-          day: '15/15',
-          month: '100%'
-        }
-      ],
+      dataSource: page.alarmTop5.data,
       columns: [
         {
           title: '装置名称',

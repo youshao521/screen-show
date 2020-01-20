@@ -8,33 +8,12 @@
   </div>
 </template>
 <script>
+import page from '../../../data/device';
 export default {
   name: 'TopFault',
   data() {
     return {
-      dataSource: [
-        {
-          key: '0',
-          name: '加氢裂化',
-          fault: 25
-        }, {
-          key: '1',
-          name: '延迟焦化',
-          fault: 23
-        }, {
-          key: '2',
-          name: '催化裂化',
-          fault: 23
-        }, {
-          key: '3',
-          name: '气体脱硫',
-          fault: 18
-        }, {
-          key: '4',
-          name: '污水处理',
-          fault: 18
-        }
-      ],
+      dataSource: page.faultTop5.data,
       columns: [
         {
           title: '装置名称',

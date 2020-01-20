@@ -8,7 +8,7 @@
           网络/电源机
         </div>
         <div class="fLeft">
-          <div class="image-box power"></div>
+          <div class="image-box power"/>
           <ul class="power-image-desc">
             <li>状态：{{chooseData.status}}</li>
             <li>电源：{{chooseData.power}}</li>
@@ -30,7 +30,7 @@
         <div class="title">
           硫化氢分析仪
         </div>
-        <div class="image-box analyzer"></div>
+        <div class="image-box analyzer"/>
         <ul class="analyzer-detail">
           <li>所属装置：<span>混合烷烃脱氢装置</span></li>
           <li>设备名称：<span>硫化氢分析仪</span></li>
@@ -51,7 +51,7 @@ export default {
   name: 'DeviceAnalysis',
   data() {
     const data = [];
-    for (let i = 1; i < 39; i ++) {
+    for (let i = 1; i < 39; i++) {
       if (i === 1 || i === 19 || i === 26) {
         data.push({
           id: this.transformNumber(i),
@@ -89,7 +89,7 @@ export default {
     clearInterval(this.wanna);
   },
   methods: {
-    sum(m,n) {
+    sum(m, n) {
       const num = Math.floor(Math.random()*(m - n) + n);
       return num;
     },

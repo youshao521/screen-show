@@ -3,6 +3,7 @@
 </template>
 <script>
 import echarts from 'echarts';
+import page from '../../../data/wisdom';
 export default {
   name: 'PieChart',
   data() {
@@ -24,7 +25,7 @@ export default {
           },
           bottom: 5,
           left: 'center',
-          data: ['事故事件', '安全隐患', '行为安全', '作业安全']
+          data: page.securityManage.title
         },
         series: [
           {
@@ -40,12 +41,7 @@ export default {
                 }
               }
             },
-            data: [
-              { value: 468, name: '事故事件' },
-              { value: 276, name: '安全隐患' },
-              { value: 116, name: '行为安全' },
-              { value: 84, name: '作业安全' }
-            ]
+            data: page.securityManage.data
           }
         ]
       });

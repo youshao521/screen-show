@@ -14,9 +14,9 @@
         </div>
         <div class="car-count-name">{{item.name}}</div>
       </div>
-      <div class="car-arrow right" :style="{ top: '52px', left: '50px' }"></div>
-      <div class="car-arrow right" :style="{ top: '52px', left: '192px' }"></div>
-      <div class="car-arrow right" :style="{ top: '52px', left: '336px' }"></div>
+      <div class="car-arrow right" :style="{ top: '52px', left: '50px' }"/>
+      <div class="car-arrow right" :style="{ top: '52px', left: '192px' }"/>
+      <div class="car-arrow right" :style="{ top: '52px', left: '336px' }"/>
       <template>
         <template v-if="data.find(x => x.name === '化验').value > 40">
           <div class="car-turn right_red" :style="{ top: '58px', left: '480px' }">
@@ -24,7 +24,7 @@
           </div>
         </template>
         <template v-else>
-          <div class="car-turn right" :style="{ top: '58px', left: '480px' }"></div>
+          <div class="car-turn right" :style="{ top: '58px', left: '480px' }"/>
         </template>
       </template>
       <template>
@@ -34,7 +34,7 @@
           </div>
         </template>
         <template v-else>
-          <div class="car-turn left" :style="{ top: '174px', left: '480px' }"></div>
+          <div class="car-turn left" :style="{ top: '174px', left: '480px' }"/>
         </template>
       </template>
       <template>
@@ -44,80 +44,23 @@
           </div>
         </template>
         <template v-else>
-          <div class="car-arrow left" :style="{ top: '226px', left: '336px' }"></div>
+          <div class="car-arrow left" :style="{ top: '226px', left: '336px' }"/>
         </template>
       </template>
-      <div class="car-arrow left" :style="{ top: '226px', left: '191px' }"></div>
-      <div class="car-arrow left" :style="{ top: '226px', left: '48px' }"></div>
+      <div class="car-arrow left" :style="{ top: '226px', left: '191px' }"/>
+      <div class="car-arrow left" :style="{ top: '226px', left: '48px' }"/>
     </div>
   </div>
 </template>
 <script>
 import './style.less';
+import page from '../../../data/wisdom';
 export default {
   name: 'RightTop',
   components: {},
   data() {
     return {
-      jamList: ['化验', '卸车', '装车'],
-      data: [
-        {
-          top: 38,
-          left: 100,
-          name: '入园',
-          value: 300,
-          min: 270,
-          max: 350
-        },
-        {
-          top: 38,
-          left: 244,
-          name: '排队',
-          value: 200,
-          min: 200,
-          max: 250
-        },
-        {
-          top: 38,
-          left: 388,
-          name: '化验',
-          value: 40,
-          min: 30,
-          max: 50
-        },
-        {
-          top: 125,
-          left: 526,
-          name: '卸车',
-          value: 30,
-          min: 10,
-          max: 40
-        },
-        {
-          top: 212,
-          left: 388,
-          name: '装车',
-          value: 50,
-          min: 40,
-          max: 60
-        },
-        {
-          top: 212,
-          left: 244,
-          name: '出厂',
-          value: 50,
-          min: 37,
-          max: 57
-        },
-        {
-          top: 212,
-          left: 100,
-          name: '出园',
-          value: 70,
-          min: 60,
-          max: 80
-        }
-      ]
+      data: page.car.data
     };
   },
   mounted() {
@@ -135,7 +78,7 @@ export default {
         });
       });
     },
-    sum(m,n) {
+    sum(m, n) {
       const num = Math.floor(Math.random()*(m - n) + n);
       return num;
     },

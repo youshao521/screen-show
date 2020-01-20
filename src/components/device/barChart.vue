@@ -3,6 +3,7 @@
 </template>
 <script>
 import echarts from 'echarts';
+import page from '../../../data/device';
 export default {
   name: 'BarChart',
   data() {
@@ -32,7 +33,7 @@ export default {
           bottom: 130
         },
         legend: {
-          data: ['报警数', '处理数'],
+          data: page.alarmCount.legendName,
           bottom: 60,
           textStyle: {
             color: '#CFDDFF'
@@ -46,7 +47,7 @@ export default {
               interval: 0,
               rotate: 30
             },
-            data: ['2019.1', '2019.2', '2019.3', '2019.4', '2019.5', '2019.6', '2019.7', '2019.8', '2019.9', '2019.10', '2019.11', '2019.12']
+            data: page.alarmCount.xAxisList
           }
         ],
         yAxis: [
@@ -60,20 +61,7 @@ export default {
             }
           }
         ],
-        series: [
-          {
-            name: '报警数',
-            type: 'bar',
-            barWidth: 8,
-            data: [97, 95, 88, 87, 85, 81, 80, 90, 85, 86, 82, 80]
-          },
-          {
-            name: '处理数',
-            type: 'bar',
-            barWidth: 8,
-            data: [80, 90, 85, 86, 82, 80, 78, 75, 80, 82, 81, 82]
-          },
-        ]
+        series: page.alarmCount.yAxisValue
       });
     }
   },

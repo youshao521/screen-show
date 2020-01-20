@@ -33,113 +33,12 @@
   </div>
 </template>
 <script>
+import page from '../../../data/wisdom';
 export default {
   data() {
     return {
-      dataSource: [
-        {
-          key: '0',
-          name: '加氢裂化',
-          day: 0.61,
-          month: 2.08,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '1',
-          name: '延迟焦化',
-          day: 0.90,
-          month: 3.69,
-          maxDay: true,
-          maxMonth: true,
-        }, {
-          key: '2',
-          name: '催化裂化',
-          day: 0.06,
-          month: 0.15,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '3',
-          name: '气体脱硫',
-          day: 0.69,
-          month: 3.08,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '4',
-          name: '污水处理',
-          day: 0.71,
-          month: 1.34,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '5',
-          name: '气体分馏',
-          day: 0.04,
-          month: 0.17,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '6',
-          name: '常减压',
-          day: 0.13,
-          month: 1.53,
-          maxDay: false,
-          maxMonth: false,
-        }
-      ],
-      backup: [
-        {
-          key: '0',
-          name: '加氢裂化',
-          day: 0.61,
-          month: 2.08,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '1',
-          name: '延迟焦化',
-          day: 0.90,
-          month: 3.69,
-          maxDay: true,
-          maxMonth: true,
-        }, {
-          key: '2',
-          name: '催化裂化',
-          day: 0.06,
-          month: 0.15,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '3',
-          name: '气体脱硫',
-          day: 0.69,
-          month: 3.08,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '4',
-          name: '污水处理',
-          day: 0.71,
-          month: 1.34,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '5',
-          name: '气体分馏',
-          day: 0.04,
-          month: 0.17,
-          maxDay: false,
-          maxMonth: false,
-        }, {
-          key: '6',
-          name: '常减压',
-          day: 0.13,
-          month: 1.53,
-          maxDay: false,
-          maxMonth: false,
-        }
-      ],
+      dataSource: page.statisticsList.data,
+      backup: page.statisticsList.data,
       columns: [
         {
           title: '装置名称',
@@ -200,7 +99,7 @@ export default {
     }
   },
   computed: {
-    
+
   }
 };
 </script>

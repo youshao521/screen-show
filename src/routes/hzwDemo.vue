@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="left">
     <a-button type="primary">Primary</a-button>
     <a-table
       :columns="columns"
@@ -37,6 +37,7 @@ const columns = [
   }
 ];
 
+import '../components/hzwDemo/style.less';
 export default {
   mounted() {
     this.fetch();

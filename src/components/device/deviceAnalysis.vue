@@ -22,6 +22,7 @@
             <li
               v-for="(item, index) in data"
               :class="deviceStatus(item.controlFlag, index)"
+              :key="item.id"
             >{{item.id}}</li>
           </ul>
         </div>
@@ -47,12 +48,13 @@
 </template>
 <script>
 import './style.less';
+import page from '../../../data/device';
 export default {
   name: 'DeviceAnalysis',
   data() {
     const data = [];
     for (let i = 1; i < 39; i++) {
-      if (i === 1 || i === 19 || i === 26) {
+      if (page.deviceAnalysis.unusual.includes(i)) {
         data.push({
           id: this.transformNumber(i),
           status: '正常',
@@ -78,8 +80,8 @@ export default {
       data,
       chooseData: data[0],
       chooseNumber: 0,
-      analyzerData: 2.55,
-      baseData: 2.55
+      analyzerData: page.deviceAnalysis.analyzerData,
+      baseData: page.deviceAnalysis.analyzerData
     };
   },
   mounted() {
@@ -98,12 +100,13 @@ export default {
       return str.length === 2 ? `C0${str}` : `C00${str}`;
     },
     choice() {
+      const { min, max } = page.deviceAnalysis;
       this.chooseNumber++;
       if (this.chooseNumber > this.data.length - 1) {
         this.chooseNumber = 0;
       }
       this.chooseData = this.data[this.chooseNumber];
-      this.analyzerData = parseFloat((this.baseData + this.sum(-3, 3)).toFixed(2));
+      this.analyzerData = parseFloat((this.baseData + this.sum(min, max)).toFixed(2));
     },
     deviceStatus(flag, number) {
       let color = '';

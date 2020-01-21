@@ -52,7 +52,8 @@
 <script>
 import './style.less';
 import 'swiper/dist/css/swiper.css';
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import page from '../../../data/device';
 export default {
   components: {
     swiper,
@@ -60,18 +61,8 @@ export default {
   },
   data() {
     return {
-      data: {
-        normalRun: 1164,
-        alarmDevice: 170,
-        fault: 20,
-        project: 356
-      },
-      dataBackup: {
-        normalRun: 1164,
-        alarmDevice: 170,
-        fault: 20,
-        project: 356
-      },
+      data: page.centerBase.base,
+      dataBackup: page.centerBase.base,
       swiperOption: {
         spaceBetween: 30,
         centeredSlides: true,
@@ -104,8 +95,9 @@ export default {
     },
     changeValue() {
       const obj = {};
+      const { min, max } = page.centerBase.float;
       for (const key in this.dataBackup) {
-        obj[key] = this.dataBackup[key] + this.sum(-3, 3);
+        obj[key] = this.dataBackup[key] + this.sum(min, max);
       }
       this.data = obj;
     }

@@ -13,55 +13,12 @@
   </div>
 </template>
 <script>
+import page from '../../../data/device';
 export default {
   name: 'FaultRecord',
   data() {
     return {
-      dataSource: [
-        {
-          key: 0,
-          name: '服务器机柜001',
-          type: '服务器机柜',
-          reason: '过热将使得电线在额定负载下跳闸',
-          repairman: '张晓峰'
-        }, {
-          key: 1,
-          name: '网络机柜005',
-          type: '网络机柜',
-          reason: '灰尘聚积，噪音增大',
-          repairman: '张晓峰'
-        }, {
-          key: 2,
-          name: '控制台机柜007',
-          type: '控制台机柜',
-          reason: '过热使仪器读数错误',
-          repairman: '王晓霞'
-        }, {
-          key: 3,
-          name: '控制台机柜010',
-          type: '控制台机柜',
-          reason: '箱体内部元件损坏',
-          repairman: '张锦江'
-        }, {
-          key: 4,
-          name: '网络机柜012',
-          type: '网络机柜',
-          reason: '振动损毁箱体内部元件',
-          repairman: '钱建设'
-        }, {
-          key: 5,
-          name: '服务器机柜009',
-          type: '服务器机柜',
-          reason: '灰尘聚积，噪音增大',
-          repairman: '钱建设'
-        }, {
-          key: 6,
-          name: '网络机柜028',
-          type: '网络机柜',
-          reason: '空气过滤装置阻塞',
-          repairman: '钱建设'
-        }
-      ],
+      dataSource: page.faultRecord.data,
       columns: [
         {
           title: '设备名称',

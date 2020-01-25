@@ -37,7 +37,7 @@ const columns = [
   }
 ];
 
-import '../components/hzwDemo/style.less';
+import '../components/parkCommand/style.less';
 export default {
   mounted() {
     this.fetch();

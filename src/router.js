@@ -4,7 +4,7 @@ import Router from "vue-router";
 import index from "./routes/index";
 import mainPage from "./routes/mainPage";
 import device from "./routes/device";
-import hzwDemo from "./routes/hzwDemo";
+import parkCommand from "./routes/parkCommand";
 Vue.use(Router);
 
 export default new Router({
@@ -25,9 +25,12 @@ export default new Router({
       component: device
     },
     {
-      path: "/hzwDemo",
-      name: "hzwDemo",
-      component: hzwDemo
+      path: "/parkCommand",
+      name: "parkCommand",
+      meta: {
+          title: '智慧工业园区运维驾驶舱 '
+      },
+      component: parkCommand
     }
   ]
 });

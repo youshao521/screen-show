@@ -2,10 +2,11 @@
   <div class="safe">
     <div class="safe-left">
       <div class="s-title">安全指数趋势</div>
-      <div :style="{height: '200px',width:'100%'}" ref="pieChart"/>
+      <div :style="{height: '200px',width:'100%'}" ref="lineChart"/>
     </div>
     <div class="safe-right">
       <div class="s-title">安全隐患分布</div>
+      <div :style="{height: '200px',width:'100%'}" ref="pieChart"/>
     </div>
   </div>
 </template>
@@ -29,8 +30,8 @@ export default {
   },
   methods: {
     initPieChart(xData) {
-      let pieChart = echarts.init(this.$refs.pieChart);
-      pieChart.setOption({
+      let lineChart = echarts.init(this.$refs.lineChart);
+      lineChart.setOption({
         xAxis: {
             type: 'category',
             boundaryGap: false,
@@ -92,6 +93,54 @@ export default {
 
             }
         }]
+      });
+      let pieChart = echarts.init(this.$refs.pieChart);
+      pieChart.setOption({
+        grid: {
+            top: 200
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            show: false,
+            orient: 'vertical',
+            left: 10,
+            data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 335, name: '直接访问'},
+                    {value: 310, name: '邮件营销'},
+                    {value: 234, name: '联盟广告'},
+                    {value: 135, name: '视频广告'},
+                    {value: 1548, name: '搜索引擎'}
+                ]
+            }
+        ]
       });
     }
   },

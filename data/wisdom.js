@@ -43,27 +43,9 @@ const securityManage = {
     { value: 84, name: '作业安全' }
   ]
 };
-// 合同额，订单总量，订单完成率，产品单耗(标煤)---基础数据
+// 生产总值---基础数据
 const mapData = {
-  staticList: [
-    {
-      title: '合同额',
-      num: 30, // 合同额基础数据
-      unit: '亿元'
-    },
-    {
-      title: '订单总量',
-      num: 8000, // 订单总量基础数据
-      unit: '个'
-    },
-    {
-      title: '订单完成率',
-      num: 10, // 订单完成率基础数据
-      unit: '%'
-    }
-  ],
-  standard: 100.3, // 产品单耗(标煤)基础数据
-  float: 5 // 产品单耗(标煤)上下浮动值
+  useValue: 780250
 };
 // 地图上的值基本数据
 const mapGasoline = {

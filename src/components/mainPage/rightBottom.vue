@@ -40,10 +40,19 @@ export default {
 		};
 	},
 	mounted() {
+		this.wanna = setInterval(this.changeValue, 5 * 1000);
 	},
 	beforeDestroy() {
+		clearInterval(this.wanna);
 	},
 	methods: {
+		changeValue() {
+			const obj1 = this.data.find(x => x.name1 === '可用库存数量');
+			const obj2 = this.data.find(x => x.name1 === '当天入库总量');
+			obj1.value1 -= 1;
+			obj2.value1 += 2;
+			obj2.value2 += 1;
+		}
 	}
 }
 </script>

@@ -46,32 +46,18 @@ export default {
   },
   data() {
     return {
-      staticList: page.mapData.staticList,
-      standard: page.mapData.standard,
-      useValue: 780250,
-      float: page.mapData.float,
-      min: 0,
-      max: 0
+      useValue: page.mapData.useValue
     };
   },
   mounted() {
-    this.min = this.standard - this.float;
-    this.max = this.standard + this.float;
-    // this.wanna = setInterval(this.changeValue, 60 * 1000);
+    this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {
-    // clearInterval(this.wanna);
+    clearInterval(this.wanna);
   },
   methods: {
     changeValue() {
-      const random = (5-(Math.random()*10)).toFixed(1);
-      let value = this.standard + parseFloat(random);
-      if (value < this.min) {
-        value = this.min;
-      } else if (value > this.max) {
-        value = this.max;
-      }
-      this.useValue = value.toFixed(1);
+      this.useValue = this.useValue + parseInt(this.useValue * 0.000003);
     }
   }
 }

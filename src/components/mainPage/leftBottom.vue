@@ -55,9 +55,24 @@ export default {
     }
   },
   mounted() {
+    this.wanna = setInterval(this.changeValue, 60 * 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.wanna);
   },
   methods: {
-
+    changeValue() {
+      const obj1 = this.healthyList1.find(x => x.name === '混凝胶');
+      const obj2 = this.healthyList1.find(x => x.name === '三氯氢硅');
+      const obj3 = this.healthyList1.find(x => x.name === 'DMC');
+      const obj4 = this.healthyList2.find(x => x.name === '甘霖颗粒剂');
+      const obj5 = this.healthyList2.find(x => x.name === '三氯氧磷');
+      obj1.value += 0.03;
+      obj2.value += 0.03;
+      obj3.value += 0.03;
+      obj4.value += 0.03;
+      obj5.value += 0.03;
+    }
   },
 }
 </script>

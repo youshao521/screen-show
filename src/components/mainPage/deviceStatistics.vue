@@ -1,5 +1,5 @@
 <template>
-  <div class="table">maxDay
+  <div class="table">
     <a-table
       :dataSource="dataSource"
       :columns="columns"

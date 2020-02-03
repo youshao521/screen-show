@@ -184,28 +184,60 @@ const car = {
  * @param {value} 单项值
  */
 const healthyList = {
-  data: [
+  data1: [
     {
-      name: '正运行设备数',
-      value: 80,
-      unit: '件'
+      name: '密封胶',
+      value: 36.32
     },
     {
-      name: '体检设备数',
-      value: 20,
-      unit: '件'
+      name: '混凝胶',
+      value: 47.34
     }, {
-      name: '诊断设备数',
-      value: 20,
-      unit: '件'
+      name: '白炭黑',
+      value: 84.21
     }, {
-      name: '停机设备数',
-      value: 3,
-      unit: '件'
+      name: '三氯氢硅',
+      value: 53.09
     }, {
-      name: '振动设备数',
-      value: 7,
-      unit: '件'
+      name: '生胶',
+      value: 61.21
+    }, {
+      name: '107胶',
+      value: 49.89
+    }, {
+      name: 'DMC',
+      value: 59.07
+    }, {
+      name: '水解物',
+      value: 61.23
+    }
+  ],
+  data2: [
+    {
+      name: '磷酸三钠',
+      value: 47
+    },
+    {
+      name: '粗品焦磷酸钠',
+      value: 48
+    }, {
+      name: '三氯氧磷',
+      value: 64.21
+    }, {
+      name: '三氯化磷',
+      value: 46.06
+    }, {
+      name: '甘霖颗粒剂',
+      value: 55.49
+    }, {
+      name: '草甘膦颗粒',
+      value: 73.33
+    }, {
+      name: '草甘膦铵盐',
+      value: 81.63
+    }, {
+      name: '草甘膦水剂',
+      value: 46.63
     }
   ]
 };
@@ -268,6 +300,25 @@ const statisticsList = {
     }
   ]
 };
+// 库存统计
+const stock = {
+  data: [{
+    name1: '可用库存数量',
+    value1: 639715,
+    name2: '库存总量',
+    value2: 642801
+  }, {
+    name1: '当天入库总量',
+    value1: 33176,
+    name2: '当天出库总量',
+    value2: 7817
+  }, {
+    name1: '移动锁定总数',
+    value1: 124,
+    name2: '盘点锁定总数',
+    value2: 389
+  }]
+};
 export default {
   parkSurvey,
   consumeData,
@@ -276,5 +327,6 @@ export default {
   mapGasoline,
   car,
   healthyList,
-  statisticsList
+  statisticsList,
+  stock
 };

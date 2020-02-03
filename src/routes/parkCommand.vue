@@ -16,7 +16,7 @@
 </template>
 <script>
 
-import '../components/parkCommand/style.less';
+// import '../components/parkCommand/style.less';
 import Menu from '../components/parkCommand/menu.vue';
 import Pic from '../components/parkCommand/pic.vue';
 import Safe from '../components/parkCommand/safe.vue';

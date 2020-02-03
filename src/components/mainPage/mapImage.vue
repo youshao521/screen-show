@@ -28,7 +28,8 @@ export default {
   name: 'MapImage',
   data() {
     return {
-      data: page.mapGasoline.baseData,
+      data: [],
+      // data: page.mapGasoline.baseData,
       min: page.mapGasoline.min,
       max: page.mapGasoline.max,
       increaseMin: page.mapGasoline.increaseMin,
@@ -36,7 +37,7 @@ export default {
     };
   },
   mounted() {
-    this.wanna = setInterval(this.changeValue, 60 * 1000);
+    // this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);

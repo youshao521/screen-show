@@ -4,6 +4,7 @@ import Router from "vue-router";
 import index from "./routes/index";
 import mainPage from "./routes/mainPage";
 import device from "./routes/device";
+import cockpit from "./routes/cockpit";
 import parkCommand from "./routes/parkCommand";
 Vue.use(Router);
 
@@ -17,11 +18,17 @@ export default new Router({
     {
       path: "/mainPage",
       name: "mainPage",
+      meta: {
+        title: '多地协同集团全景驾驶舱 '
+      },
       component: mainPage
     },
     {
       path: "/device",
       name: "device",
+      meta: {
+        title: '工厂设备运行管理驾驶舱 '
+      },
       component: device
     },
     {
@@ -31,6 +38,14 @@ export default new Router({
           title: '智慧工业园区运维驾驶舱 '
       },
       component: parkCommand
+    },
+    {
+      path: "/cockpit",
+      name: "cockpit",
+      meta: {
+          title: '智能互联工厂管控驾驶舱'
+      },
+      component: cockpit
     }
   ]
 });

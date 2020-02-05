@@ -1,39 +1,44 @@
 <template>
-  <div class="table">
-    <a-table
-      :dataSource="dataSource"
-      :columns="columns"
-      :pagination="false"
-    >
-      <template slot="day" slot-scope="text, record">
-        <template v-if="record.maxDay">
-          <span :style="{ color: 'red' }">
-            {{text}}
-          </span>
-        </template>
-        <template v-else>
-          <span>
-            {{text}}
-          </span>
-        </template>
-      </template>
-      <template slot="month" slot-scope="text, record">
-        <template v-if="record.maxMonth">
-          <span :style="{ color: 'red' }">
-            {{text}}
-          </span>
-        </template>
-        <template v-else>
-          <span>
-            {{text}}
-          </span>
-        </template>
-      </template>
-    </a-table>
+  <div class="box">
+    <div class="box-title">装置环保超标统计</div>
+    <div class="box-content">
+      <div class="table">
+        <a-table
+          :dataSource="dataSource"
+          :columns="columns"
+          :pagination="false"
+        >
+          <template slot="day" slot-scope="text, record">
+            <template v-if="record.maxDay">
+              <span :style="{ color: 'red' }">
+                {{text}}
+              </span>
+            </template>
+            <template v-else>
+              <span>
+                {{text}}
+              </span>
+            </template>
+          </template>
+          <template slot="month" slot-scope="text, record">
+            <template v-if="record.maxMonth">
+              <span :style="{ color: 'red' }">
+                {{text}}
+              </span>
+            </template>
+            <template v-else>
+              <span>
+                {{text}}
+              </span>
+            </template>
+          </template>
+        </a-table>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import page from '../../../data/wisdom';
+import page from '../../../data/cockpit';
 export default {
   data() {
     return {
@@ -106,7 +111,7 @@ export default {
 <style scoped>
   .table >>> .ant-table-body {
     width: 336px;
-    margin: 54px auto 0;
+    margin: 16px auto 4px;
   }
   .table >>> .ant-table-thead {
     background-image: linear-gradient(269deg, rgba(72,19,255,0.1) 0%, rgba(10,236,249,0.1) 100%);

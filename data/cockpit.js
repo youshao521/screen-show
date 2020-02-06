@@ -1,3 +1,11 @@
+// 基本天气信息
+const baseWeather = {
+  time: null,
+  date: null,
+  week: null,
+  place: '宁波',
+  temperature: '4～14°C'
+};
 // 能耗数据 1-12月
 const consumeData = {
   title1: 2018,
@@ -109,5 +117,6 @@ export default {
   consumeData,
   securityManage,
   healthyList,
-  statisticsList
+  statisticsList,
+  baseWeather
 }

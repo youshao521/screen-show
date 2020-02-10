@@ -53,15 +53,39 @@ export default {
           unit: 'kg/t'
         }
       ],
+      standardPercent: 94.1,
       standard: 100.3, // 产品单耗(标煤)基础数据
-      float: 5 // 产品单耗(标煤)上下浮动值
+      float: 5, // 产品单耗(标煤)上下浮动值
+      min: 0,
+      max: 0
     };
   },
   mounted() {
+    this.min = this.standard - this.float;
+    this.max = this.standard + this.float;
+    this.wanna = setInterval(this.changeValue, 60 * 1000);
   },
   beforeDestroy() {
+    clearInterval(this.wanna);
   },
   methods: {
+    changeValue() {
+      const random = (5-(Math.random()*10)).toFixed(1);
+      let value = this.standard + parseFloat(random);
+      if (value < this.min) {
+        value = this.min;
+      } else if (value > this.max) {
+        value = this.max;
+      }
+      this.staticList.find(x => x.title === '产品单耗(标煤)').num = value.toFixed(1);
+      let nowValue = parseFloat(this.staticList.find(x => x.title === '订单完成率').num);
+      if (nowValue === 100) {
+        this.staticList.find(x => x.title === '订单完成率').num = this.standardPercent;
+      } else {
+        nowValue += 0.1;
+        this.staticList.find(x => x.title === '订单完成率').num = nowValue.toFixed(1);
+      }
+    }
   }
 }
 </script>

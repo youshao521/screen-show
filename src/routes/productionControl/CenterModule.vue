@@ -33,7 +33,7 @@
         <div
           :style='{
           height: i.val*44/100+"px",
-          top:i.progress.top+"px",
+          bottom:i.progress.bottom+"px",
           left:i.progress.left+"px"
         }'
           class='progress'
@@ -41,7 +41,7 @@
         />
         <p>{{i.name}}</p>
         <p class='pointVal'>
-          <span class='pointNum'>{{i.val}}</span>
+          <span class='pointNum'>{{i.val.toFixed(2)}}</span>
           {{i.unit}}
         </p>
       </div>

@@ -101,7 +101,7 @@ export default {
       this.showData = temp
       temp = null
       // console.log(this.showData)
-    }, 10 * 1000)
+    }, 60 * 60 * 1000)
     this.options = this.renderOptions()
   },
   methods: {

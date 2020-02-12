@@ -2,7 +2,7 @@
   <div class='box'>
     <p class='title'>生产管控一体化驾驶舱</p>
     <div class='content'>
-      <!-- <div class='leftCont'>
+     <div class='leftCont'>
         <ImportRunOptsModule :list='runOpts' />
         <ActionRunningModule :list='actionRunning' />
       </div>
@@ -11,7 +11,7 @@
           :list='centerData'
           :points='centerPoints'
         />
-      </div>-->
+      </div>
       <div class='rightCont'>
         <WorkshopModule :list='workshops' />
         <SampleAnalysisModule />
@@ -54,6 +54,7 @@ export default {
       this.timer1()
       this.timer2()
       this.timer3()
+      this.timer4()
     },
     random1(data) {
       return data.map(x => {
@@ -74,18 +75,25 @@ export default {
         }
       })
     },
-    random3(data) {
-      return data.map((x, i) => {
-        let temp = x
-        if (i !== 0) {
-          temp = {
-            ...x,
-            num: x.num + getR(0, 5, 2),
-          }
-        }
-        return temp
-      })
+    random3() {
+      this.centerData[0].num += 1
+      this.centerData[1].num = mock.centerData[1].num + getR(-.5,.5)
+      this.centerData[2].num += 0.19 
+      this.centerData[3].num += 0.17
+			console.log(this.centerData)
     },
+		random4(data) {
+			return data.map(x => {
+				let temp = x
+				if(temp.val !==undefined) {
+					temp = {
+						...x,
+						val: x.val + getR()
+					}
+				}
+				return temp
+			})
+		},
     timer1() {
       this.runOpts = this.random1(mock.runOpts)
     },
@@ -93,28 +101,37 @@ export default {
       this.actionRunning = this.random2(mock.actionRunning)
     },
     timer3() {
-      this.centerData = this.random3(mock.centerData)
+      this.random3()
     },
+		timer4() {
+			this.centerPoints = this.random4(mock.centerPoints)
+		}
   },
   watch: {
     centerData: {
       handler() {
-        setTimeout(this.timer3, 60 * 1000)
+        setTimeout(this.timer3, 5 * 1000)
       },
       deep: true,
     },
     runOpts: {
       handler() {
-        setTimeout(this.timer1, 60 * 1000)
+        setTimeout(this.timer1, 5 * 1000)
       },
       deep: true,
     },
     actionRunning: {
       handler() {
-        setTimeout(this.timer2, 24 * 60 * 1000)
+        setTimeout(this.timer2, 24 * 60 * 60 * 1000)
       },
       deep: true,
     },
+		centerPoints: {
+			handler() {
+			  setTimeout(this.timer4, 5 * 1000)
+			},
+			deep: true,
+		}
   },
   destroyed() {
     // console.log(this.timer)

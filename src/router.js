@@ -7,7 +7,7 @@ import device from "./routes/device";
 import cockpit from "./routes/cockpit";
 import parkCommand from "./routes/parkCommand";
 import ProductionControl from './routes/productionControl'
-
+import SmartInd from './routes/smartInd'
 Vue.use(Router);
 
 export default new Router({
@@ -23,10 +23,9 @@ export default new Router({
       component: ProductionControl,
     },
     {
-      // path: '/TechMgr',
-      path: '/mainPage',
-      name: 'mainPage',
-      component: mainPage,
+      path: '/smartInd',
+      name: 'SmartInd',
+      component: SmartInd,
     },
     {
       path: "/mainPage",
@@ -43,14 +42,6 @@ export default new Router({
         title: '工厂设备运行管理驾驶舱 '
       },
       component: device
-    },
-    {
-      path: "/parkCommand",
-      name: "parkCommand",
-      meta: {
-        title: '智慧工业园区运维驾驶舱 '
-      },
-      component: parkCommand
     },
     {
       path: "/cockpit",

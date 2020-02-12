@@ -3,13 +3,15 @@ import Vuex from 'vuex'
 import VCharts from 'v-charts'
 import {
   Menu,Table,Row,Col,Form,Input,
-  Button,Checkbox,Tooltip,Select,
+  Button,Checkbox,Tooltip,Select,Progress,
   Modal,InputNumber,Tree,Pagination,TreeSelect,
 } from 'ant-design-vue'
 import App from './App.vue'
 import router from './router'
 import createStore from './store/index.js';
+
 Vue.use(Vuex)
+Vue.use(Progress)
 Vue.use(TreeSelect)
 Vue.use(Pagination)
 Vue.use(Tree)
@@ -30,14 +32,13 @@ Vue.prototype.$comfirm = Modal.confirm
 Vue.config.productionTip = false
 document.title = 'start project'
 const store = createStore();
-router.beforeEach((to, from, next) => {
+router.beforeEach((to,from,next) => {
 
   /* 路由发生变化修改页面title */
   if (to.meta.title) {
-      document.title = to.meta.title;
+    document.title = to.meta.title;
   }
   next();
-
 });
 
 new Vue({

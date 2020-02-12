@@ -3,6 +3,7 @@
 </template>
 <script>
 import echarts from 'echarts';
+import page from '../../../data/device';
 export default {
   name: 'LineChart',
   data() {
@@ -26,7 +27,7 @@ export default {
         },
         xAxis: {
           type: 'category',
-          data: ['2019/11/01', '2019/11/02', '2019/11/03', '2019/11/04', '2019/11/05'],
+          data: page.faultCount.xAxisList,
           axisLabel: {
             interval: 0,
             rotate: 10
@@ -50,7 +51,7 @@ export default {
             }
           },
           symbolSize: 10,
-          data: [36, 42, 23, 68, 20],
+          data: page.faultCount.yAxisValue,
           type: 'line'
         }]
       });

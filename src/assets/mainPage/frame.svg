@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1068px" height="854px" viewBox="0 0 1068 854" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>kuang_mid</title>
+    <desc>Created with Sketch.</desc>
+    <g id="数据大屏（全）" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map" transform="translate(0.000000, -112.000000)">
+            <g id="kuang_mid" transform="translate(0.000000, 112.000000)">
+                <path d="M18,851 L18,853 L0,853 L0,835 L2.5,835 L2.5,851 L18,851 Z M1068,835 L1068,853 L1050,853 L1050,851 L1066,851 L1066,835 L1068,835 Z M18,0 L18,2 L2,2 L2,18 L0,18 L0,0 L18,0 Z M1068,0 L1068,18 L1066,18 L1066,2 L1050,2 L1050,0 L1068,0 Z" id="形状" fill="#0F369E"></path>
+                <rect id="矩形" fill-opacity="0.704845935" fill="#000000" opacity="0.300000012" x="1" y="2" width="1066" height="851"></rect>
+                <path d="M1067.5,1.5 L0.5,1.5 L0.5,853.5 L1067.5,853.5 L1067.5,1.5 Z M1066.5,2.5 L1066.5,852.5 L1.5,852.5 L1.5,2.5 L1066.5,2.5 Z" id="矩形" fill="#2A68FF" fill-rule="nonzero" opacity="0.300000012"></path>
+            </g>
+        </g>
+    </g>
+</svg>

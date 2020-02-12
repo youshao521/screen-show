@@ -3,6 +3,7 @@
 </template>
 <script>
 import echarts from 'echarts';
+import page from '../../../data/wisdom';
 export default {
   name: 'BarChart',
   data() {
@@ -57,16 +58,16 @@ export default {
         ],
         series: [
           {
-            name: '2018年',
+            name: `${page.consumeData.title1}年`,
             type: 'bar',
             barWidth: 8,
-            data: [97, 95, 88, 87, 85, 81, 80, 90, 85, 86, 82, 80]
+            data: page.consumeData.data1
           },
           {
-            name: '2019年',
+            name: `${page.consumeData.title2}年`,
             type: 'bar',
             barWidth: 8,
-            data: [80, 90, 85, 86, 82, 80, 78, 75, 80, 82, 81, 82]
+            data: page.consumeData.data2
           },
         ]
       });

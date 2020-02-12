@@ -6,6 +6,7 @@ var devProxy = ['/api', '/ping', '/auth', '/gateway',
 var modifyVars = require('./theme');
 var proEnv = require('./config/pro.env');
 var devEnv = require('./config/dev.env');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var env = process.env.NODE_ENV;
 
 var target = env === 'prodction' ? proEnv.hosturl : devEnv.hosturl;
@@ -38,4 +39,12 @@ module.exports = {
     // before: app => {}
   },
   publicPath: './', // 路径打包处理为相对路径
+  configureWebpack: {
+    plugins: [
+      new CopyWebpackPlugin([{
+        from: './data',
+        to: './data'
+      }])
+    ]
+  }
 }

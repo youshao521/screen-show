@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.mainbox {
+  height: 1080px;
+  width: 2700px;
+  background: url(../../assets/cockpit/bg.png);
+  position: relative;
+}
+.titleContent {
+  margin-top: 33px;
+}
+.base-content {
+  font-family: PingFangSC-Semibold;
+  font-size: 46px;
+  color: #F1F9FF;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 0 58px;
+}
+.base-title-icon {
+  width: 165px!important;
+  height: 39px!important;
+  display: inline-block;
+  &.left {
+    background: url(../../assets/title_left.svg);
+  }
+  &.right {
+    background: url(../../assets/title_right.svg);
+  }
+}
+.base-info {
+  position: absolute;
+  width: 1244px;
+  left: 50%;
+  margin-left: -622px;
+}
+.base-description-box {
+  overflow: hidden;
+  li {
+    width: 414px;
+    float: left;
+    border-right: 1px solid rgba(0,123,208,0.3);
+  }
+  li:last-child {
+    border-right: 0;
+  }
+}
+.base-description-title {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 20px;
+  letter-spacing: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.base-description-title.purple {
+  color: #A43DF3;
+}
+.base-description-title.orange {
+  color: #ED7F44;
+}
+.base-description-title.green {
+  color: #31B643;
+}
+.base-description-content {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  color: #9CB2D6;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 7px;
+}
+.base-number-box {
+  width: 788px;
+  height: 90px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 24px;
+  margin: 27px auto 0;
+  li {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
+}
+.base-number-title {
+  margin-top: 9px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: rgba(157,185,255,0.5);
+  letter-spacing: 0;
+  text-align: center;
+}
+.base-number-content {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  font-size: 32px;
+  color: #A5BFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.taskbar {
+  width: 1120px;
+  height: 96px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -560px;
+  background: rgba(51,51,55,0.7);
+}
+.history {
+  width: 849px;
+  float: left;
+  li {
+    width: 64px;
+    margin: 16px 0 0 23px;
+    position: relative;
+    float: left;
+  }
+}
+.small_circle {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  bottom: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.bottom_border {
+  float: left;
+  width: 2px;
+  height: 60px;
+  border-right: 1px solid #FFFFFF;
+  opacity: 0.14;
+  margin-top: 18px;
+}
+.quick {
+  width: 268px;
+  float: left;
+  height: 100%;
+  li {
+    margin-top: 18px;
+    width: 89px;
+    float: left;
+    text-align: center;
+  }
+}
+.button_icon_desc {
+  display: block;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: -0.15px;
+  text-align: center;
+}
+.bottom_icon {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+}
+.bottom_icon.apply {
+  background: url(../../assets/cockpit/yingyong.png) 0 0 no-repeat;
+}
+.bottom_icon.component {
+  background: url(../../assets/cockpit/zujian.png) 0 0 no-repeat;
+}
+.bottom_icon.back {
+  background: url(../../assets/cockpit/back.png) 0 0 no-repeat;
+}
+.cockpit-left {
+  float: left;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 39px 0 0 35px;
+  width: 830px;
+}
+.cockpit-right {
+  float: right;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 31px 33px;
+}
+.weather {
+  width: 360px;
+  height: 220px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px 40px;
+}
+.time {
+  font-family: PingFangSC-Medium;
+  font-size: 45px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 20px 0 0;
+  display: inline-block;
+}
+.date {
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  margin: 0 16px 0 0;
+  display: inline-block;
+  vertical-align: super;
+}
+.weather-desc {
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: -0.2px;
+  line-height: 30px;
+  float: left;
+  margin-top: 30px;
+}
+.weather-icon {
+  height: 48px;
+  width: 48px;
+  background: url(../../assets/cockpit/sun.png) 0 0 no-repeat;
+  float: left;
+  margin: 36px 17px 0 68px;
+}
+.box {
+  width: 384px;
+  min-height: 316px;
+  float: left;
+  margin: 12px 12px 0 0;
+}
+.box-title {
+  height: 35px;
+  background: rgba(51,51,55,0.83);
+  border-radius: 12px 12px 0 0;
+  font-family: PingFangSC-Medium;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: -0.08px;
+  line-height: 35px;
+  padding: 0 12px;
+}
+.box-content {
+  opacity: 0.7;
+  background: #000000;
+  border: 1px solid rgba(75,75,75,0.7);
+  width: 100%;
+  min-height: 280px;
+}
+
+.healthy1 {
+  padding: 25px 0px 0 34px;
+  li {
+    margin-top: 4px;
+  }
+}
+.healthy1-title {
+  opacity: 0.5;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #CFDDFF;
+  letter-spacing: 0;
+}
+.healthy1-value {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #C8D8FF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 33px;
+}
+.healthy1-unit {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #C8D8FF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 33px;
+}
+.healthy1-content {
+  display:inline-block;
+  margin-right: 22px;
+}
+.healthy1-color-box {
+  width: 238px;
+  height: 20px;
+  position: relative;
+}
+.healthy1-color-shadow {
+  width: 238px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url(../../assets/cockpit/jiankang.svg) -12px -4px                          ;
+}
+.healthy1-color {
+  background: linear-gradient(left, #4813FF, #0AECF9);
+  height: 100%;
+  position: relative;
+}
+.app-list {
+  overflow: hidden;
+  width: 400px;
+  li {
+    float: left;
+    margin: 0 24px 37px 0;
+  }
+}
+.app-box {
+  height: 96px;
+  width: 96px;
+  background: rgba(245,246,247,0.16);
+  border: 1px dashed #D3D8DE;
+  border-radius: 8px;
+  padding: 11px 0 0 11px;
+}
+.app-title {
+  margin-top: 8px;
+  font-family: MicrosoftYaHei;
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: -0.19px;
+  text-align: center;
+}
+
+
+.app {
+  display: block;
+  background-size: 100% 100%;
+}
+.app.app_1 {
+  height: 64px;
+  width: 64px;
+  background: url(../../assets/cockpit/1.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.app.app_2 {
+  height: 64px;
+  width: 64px;
+  background: url(../../assets/cockpit/2.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.app.app_3 {
+  height: 64px;
+  width: 64px;
+  background: url(../../assets/cockpit/3.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.app.app_4 {
+  height: 64px;
+  width: 64px;
+  background: url(../../assets/cockpit/4.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.app.app_5 {
+  height: 64px;
+  width: 64px;
+  background: url(../../assets/cockpit/5.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.small-app {
+  display: block;
+  height: 32px;
+  width: 32px;
+  float: left;
+  margin: 0 8px 8px 0;
+}
+.small-app1 {
+  background: url(../../assets/cockpit/app/1.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app2 {
+  background: url(../../assets/cockpit/app/2.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app3 {
+  background: url(../../assets/cockpit/app/3.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app4 {
+  background: url(../../assets/cockpit/app/4.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app5 {
+  background: url(../../assets/cockpit/app/5.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app6 {
+  background: url(../../assets/cockpit/app/6.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app7 {
+  background: url(../../assets/cockpit/app/7.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app8 {
+  background: url(../../assets/cockpit/app/8.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app9 {
+  background: url(../../assets/cockpit/app/9.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app10 {
+  background: url(../../assets/cockpit/app/10.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app11 {
+  background: url(../../assets/cockpit/app/11.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app12 {
+  background: url(../../assets/cockpit/app/12.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app13 {
+  background: url(../../assets/cockpit/app/13.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app14 {
+  background: url(../../assets/cockpit/app/14.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app15 {
+  background: url(../../assets/cockpit/app/15.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app16 {
+  background: url(../../assets/cockpit/app/16.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app17 {
+  background: url(../../assets/cockpit/app/17.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app18 {
+  background: url(../../assets/cockpit/app/18.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app19 {
+  background: url(../../assets/cockpit/app/19.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app20 {
+  background: url(../../assets/cockpit/app/20.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app21 {
+  background: url(../../assets/cockpit/app/21.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app22 {
+  background: url(../../assets/cockpit/app/22.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app23 {
+  background: url(../../assets/cockpit/app/23.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app24 {
+  background: url(../../assets/cockpit/app/24.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app25 {
+  background: url(../../assets/cockpit/app/25.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app26 {
+  background: url(../../assets/cockpit/app/26.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app27 {
+  background: url(../../assets/cockpit/app/27.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app28 {
+  background: url(../../assets/cockpit/app/28.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app29 {
+  height: 96px;
+  width: 96px;
+  border-radius: 8px;
+  background: url(../../assets/cockpit/app/29.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app30 {
+  height: 96px;
+  width: 96px;
+  border-radius: 8px;
+  background: url(../../assets/cockpit/app/30.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app31 {
+  height: 96px;
+  width: 96px;
+  border-radius: 8px;
+  background: url(../../assets/cockpit/app/31.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.small-app32 {
+  height: 96px;
+  width: 96px;
+  border-radius: 8px;
+  background: url(../../assets/cockpit/app/32.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}

@@ -3,6 +3,7 @@
 </template>
 <script>
 import echarts from 'echarts';
+import page from '../../../data/device';
 export default {
   name: 'LineAreaChart',
   data() {
@@ -34,19 +35,7 @@ export default {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: [
-            '2019-09-20',
-            '2019-09-21',
-            '2019-09-22',
-            '2019-09-23',
-            '2019-09-24',
-            '2019-09-25',
-            '2019-09-26',
-            '2019-09-27',
-            '2019-09-28',
-            '2019-09-29',
-            '2019-09-30'
-          ],
+          data: page.lineAreaChart.xAxis,
           // axisLabel:{
           //   interval: 0,
           //   rotate: 10
@@ -62,8 +51,9 @@ export default {
           }
         },
         series: [{
-          data: [5, 8, 3, 15, 20, 3, 5, 3, 16, 23, 25],
+          data: page.lineAreaChart.yAxis,
           type: 'line',
+          smooth: true,
           lineStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
               offset: 0,

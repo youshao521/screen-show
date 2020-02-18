@@ -4,7 +4,7 @@
     <div class="mainTitle">
       <div class="titleContent">
         <i class="base-title-icon left"/>
-        <span class="base-content">多地协同集团全景驾驶舱</span>
+        <span class="base-content">集团异地业务协同全景驾驶舱</span>
         <i class="base-title-icon right"/>
       </div>
     </div>

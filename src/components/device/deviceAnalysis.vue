@@ -5,7 +5,7 @@
     <div class="analysis-content">
       <div class="power-machine">
         <div class="title">
-          网络/电源机
+          网络/电源机柜
         </div>
         <div class="fLeft">
           <div class="image-box power"/>

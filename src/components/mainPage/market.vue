@@ -37,7 +37,7 @@ export default {
           },
         },
         grid: {
-          left: 50,
+          left: 80,
           bottom: 150
         },
         xAxis: [

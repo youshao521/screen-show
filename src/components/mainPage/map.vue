@@ -28,7 +28,7 @@
           <div class="bg-num" v-for="item in useValue.toString().length"></div>
           <div class="showNumBox">
             <span class="iNum">{{useValue}}</span>
-            <span class="iUnit">万</span>
+            <span class="iUnit">万吨</span>
           </div>
         </li>
      </ul>

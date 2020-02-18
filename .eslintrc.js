@@ -13,15 +13,15 @@ module.exports = {
   ],
   plugins: ['vue'],
   rules: {
-    "vue/html-self-closing": [1,{
-      "html": {
-        "void": "never",
-        "normal": "always",
-        "component": "always"
-      },
-      "svg": "always",
-      "math": "always"
-    }],
+    // "vue/html-self-closing": [1,{
+    //   "html": {
+    //     "void": "never",
+    //     "normal": "always",
+    //     "component": "always"
+    //   },
+    //   "svg": "always",
+    //   "math": "always"
+    // }],
     indent: [2,2,{ SwitchCase: 1 }], // 两个空格的缩进
     quotes: [2,'single'], // js必须使用单引号
     // 'no-console': [1], // 不允许console语句

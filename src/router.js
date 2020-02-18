@@ -7,6 +7,7 @@ import device from "./routes/device";
 import cockpit from "./routes/cockpit";
 import parkCommand from "./routes/parkCommand";
 import ProductionControl from './routes/productionControl'
+import Safe from './routes/safe'
 import SmartInd from './routes/smartInd'
 Vue.use(Router);
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/prodCtrl',
       name: 'prodCtrl',
       component: ProductionControl,
+    },
+    {
+      path: '/safe',
+      name: 'safe',
+      component: Safe,
     },
     {
       path: '/smartInd',

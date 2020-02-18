@@ -21,6 +21,7 @@ export default {
         title: {
           left: 'center',
           text: '焦化富气空冷器',
+          padding: 5,
           textStyle: {
             color: '#E0EBFE',
             fontSize: 14
@@ -30,7 +31,7 @@ export default {
           color: '#CFDDFF'
         },
         grid: {
-          top: 50
+          top: 30
         },
         xAxis: {
           type: 'category',
@@ -43,9 +44,15 @@ export default {
         },
         yAxis: {
           type: 'value',
+          name: '腐蚀速率（mm/a）',
+          nameLocation: 'middle',
+          nameTextStyle: {
+            padding: 10
+          },
           splitLine: {
             show: true,
             lineStyle: {
+              type: "dashed",
               color: 'rgba(207, 221, 255, 0.15)'
             }
           }
@@ -54,6 +61,7 @@ export default {
           data: page.lineAreaChart.yAxis,
           type: 'line',
           smooth: true,
+          showSymbol: false,
           lineStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
               offset: 0,

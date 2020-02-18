@@ -6,10 +6,18 @@
       <span>更多</span>
     </div>
     <a-table
+      :style="{ 'margin-top': '10px' }"
       :dataSource="dataSource"
       :columns="columns"
       :pagination="false"
-    />
+    >
+      <template slot="reason" slot-scope="text, record">
+        <span :style="{ opacity: 0.7 }">{{text}}</span>
+      </template>
+      <template slot="repairman" slot-scope="text, record">
+        <span :style="{ opacity: 0.7 }">{{text}}</span>
+      </template>
+    </a-table>
   </div>
 </template>
 <script>
@@ -23,7 +31,8 @@ export default {
         {
           title: '设备名称',
           dataIndex: 'name',
-          width: '20%'
+          width: '20%',
+          scopedSlots: { customRender: 'name' }
         },
         {
           title: '设备类型',
@@ -60,6 +69,9 @@ export default {
 }
 </script>
 <style scoped>
+  .table {
+    position: relative;
+  }
   .table >>> .ant-table-body {
     width: 100%;
     padding: 0 15px;
@@ -77,16 +89,15 @@ export default {
     color: #CFDDFF;
     letter-spacing: 0;
     line-height: 40px;
+    border-bottom: 0;
   }
   .table >>> .ant-table-tbody > tr > td {
     padding: 0 10px;
-    opacity: 0.5;
     font-family: PingFangSC-Semibold;
     font-size: 14px;
     color: #CFDDFF;
     letter-spacing: 0;
     line-height: 40px;
-    opacity: 0.7;
     border-bottom: 1px solid #192444;
   }
 </style>

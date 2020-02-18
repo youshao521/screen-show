@@ -22,7 +22,7 @@ export default {
           color: '#CFDDFF'
         },
         grid: {
-          top: 50,
+          top: 30,
           bottom: 100
         },
         xAxis: {
@@ -38,6 +38,7 @@ export default {
           splitLine: {
             show: true,
             lineStyle: {
+              type: "dashed",
               color: 'rgba(207, 221, 255, 0.15)'
             }
           }

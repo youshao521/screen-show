@@ -63,6 +63,12 @@
                         <tspan x="128.514515" y="156">0.263 mm</tspan>
                     </text>
                 </g>
+                <g id="设备状态" transform="translate(58.000000, 114.000000)">
+                    <text id="开启" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="14" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="18" y="15">开启</tspan>
+                    </text>
+                    <circle id="椭圆形" fill="#72EB6B" cx="6" cy="10" r="6"></circle>
+                </g>
             </g>
         </g>
     </g>

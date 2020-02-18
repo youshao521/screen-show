@@ -1,6 +1,6 @@
 
 <template>
-  <div class="mainbox">
+  <div class="mainbox-device">
     <div class="mainTitle">
       <div class="titleContent">
         <i class="base-title-icon left"/>

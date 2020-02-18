@@ -19,12 +19,6 @@
                 <text id="反应物压缩机-K301" font-family="MicrosoftYaHei-Bold, Microsoft YaHei" font-size="20" font-weight="bold" fill="#C3D6FF">
                     <tspan x="395" y="605">反应物压缩机 K301</tspan>
                 </text>
-                <g id="设备状态" transform="translate(58.000000, 114.000000)">
-                    <text id="开启" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="14" font-weight="normal" fill="#FFFFFF">
-                        <tspan x="18" y="15">开启</tspan>
-                    </text>
-                    <circle id="椭圆形" fill="#72EB6B" cx="6" cy="10" r="6"></circle>
-                </g>
                 <g id="编组-3" transform="translate(46.000000, 131.000000)">
                     <rect id="矩形" fill="#0B2180" opacity="0.703347" x="0" y="21" width="277" height="386" rx="4"></rect>
                     <text id="一级出口流量" opacity="0.7" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="14" font-weight="normal" letter-spacing="-0.175" fill="#FFFFFF">
@@ -131,6 +125,12 @@
                     </text>
                     <polyline id="路径-3" stroke="#4A68EA" points="3 2.5 247 23 328 55"></polyline>
                     <circle id="椭圆形" stroke="#4A68EA" fill="#D8D8D8" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="设备状态" transform="translate(58.000000, 114.000000)">
+                    <text id="开启" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="14" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="18" y="15">开启</tspan>
+                    </text>
+                    <circle id="椭圆形" fill="#72EB6B" cx="6" cy="10" r="6"></circle>
                 </g>
             </g>
         </g>

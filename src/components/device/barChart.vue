@@ -56,6 +56,7 @@ export default {
             splitLine: {
               show: true,
               lineStyle: {
+                type: "dashed",
                 color: 'rgba(207, 221, 255, 0.15)'
               }
             }

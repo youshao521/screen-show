@@ -4,7 +4,35 @@
       :dataSource="dataSource"
       :columns="columns"
       :pagination="false"
-    />
+    >
+      <template slot="day" slot-scope="text, record">
+        <template v-if="text.split('/')[0] === '23'">
+          <span :style="{ color: '#E9422B' }">{{text.split('/')[0]}}</span>
+          <span>/{{text.split('/')[1]}}</span>
+        </template>
+        <template v-else>
+          <span :style="{ color: '#CFDDFF' }">{{text.split('/')[0]}}</span>
+          <span>/{{text.split('/')[1]}}</span>
+        </template>
+      </template>
+      <template slot="month" slot-scope="text, record">
+        <template v-if="text === '100%'">
+          <span :style="{ color: '#6DD230' }">
+            {{text}}
+          </span>
+        </template>
+        <template v-else-if="text === '8%'">
+          <span :style="{ color: '#E9422B' }">
+            {{text}}
+          </span>
+        </template>
+        <template v-else>
+          <span>
+            {{text}}
+          </span>
+        </template>
+      </template>
+    </a-table>
   </div>
 </template>
 <script>
@@ -64,13 +92,13 @@ export default {
     color: #CFDDFF;
     letter-spacing: 0;
     line-height: 40px;
+    border-bottom: 0;
   }
   .table >>> .ant-table-tbody > tr > td {
     padding: 0 10px;
-    opacity: 0.5;
     font-family: PingFangSC-Semibold;
     font-size: 14px;
-    color: #CFDDFF;
+    color: rgba(207,221,255,0.5);
     letter-spacing: 0;
     line-height: 40px;
     opacity: 0.7;

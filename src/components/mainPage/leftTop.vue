@@ -2,7 +2,7 @@
 <template>
   <div class="smallPage">
     <div class="small-page-single" :style="{ 'width': '50%'}">
-      <div class="subTitle">市场份额分布</div>
+      <div class="subTitle">销售额</div>
       <Market />
     </div>
     <div class="small-page-single" :style="{ 'width': '50%'}">

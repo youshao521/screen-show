@@ -5,14 +5,19 @@
     <div class="analysis-content">
       <div class="power-machine">
         <div class="title">
-          网络/电源机
+          网络/电源机柜
         </div>
         <div class="fLeft">
           <div class="image-box power"/>
           <ul class="power-image-desc">
             <li>状态：{{chooseData.status}}</li>
             <li>电源：{{chooseData.power}}</li>
-            <li>控制器：<span :style="{ color: `${chooseData.controlFlag ? '' : '#DD0000'}` }">{{chooseData.control}}</span></li>
+            <template v-if="!chooseData.controlFlag">
+              <li :style="{ color: '#fff' }">控制器：<span :style="{ color: '#DD0000' }">{{chooseData.control}}</span></li>
+            </template>
+            <template v-else>
+              <li>控制器：<span>{{chooseData.control}}</span></li>
+            </template>
             <li>I/O：{{chooseData.IO}}</li>
             <li>网络通讯：{{chooseData.network}}</li>
           </ul>

@@ -18,8 +18,8 @@
         <div class='perBox'>
           <div
             :style='{background:i.val>=90 ?
-            "linear-gradient(179deg, #429321 0%, #72DD0D 100%)":
-            "linear-gradient(180deg, #387DFF 0%, #00B4FB 100%)",
+            "linear-gradient(270deg, #429321 0%, #72DD0D 100%)":
+            "linear-gradient(270deg, #387DFF 0%, #00B4FB 100%)",
             width: i.val+"%"
             }'
             class='perCurr'
@@ -43,6 +43,7 @@
 
 <script>
 import Chart from '../../components/chart/commonChart'
+import echarts from 'echarts'
 import { workshopChartOpts } from '../../mock/prodCtrl_mock'
 export default {
   name: 'WorkshopModule',
@@ -73,6 +74,13 @@ export default {
         textStyle: {
           color: '#9CB2D6',
         },
+        color: [
+          'rgba(207,221,255,.3)',
+          new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: '#C41C35' },
+            { offset: 1, color: '#E74C50' },
+          ]),
+        ],
         legend: {
           bottom: 6,
           data: workshopChartOpts.name,

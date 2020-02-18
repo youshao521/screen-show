@@ -30,7 +30,7 @@ export default {
           text: '安全指数趋势',
           textStyle: {
             fontSize: 20,
-            fontWeight: 'lighter',
+            // fontWeight: 'lighter',
             color: '#9DB9FF',
           },
         },

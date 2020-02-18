@@ -1,6 +1,6 @@
 <template>
   <div class='block1'>
-    <p class='smtitle'>重要运行参数</p>
+    <p class='smtitle bold'>重要运行参数</p>
     <div class='itemsList'>
       <div
         :key='i.name'

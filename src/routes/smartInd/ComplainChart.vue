@@ -32,7 +32,7 @@ export default {
           left: 0,
           textStyle: {
             fontSize: 20,
-            fontWeight: 'lighter',
+            // fontWeight: 'lighter',
             color: '#9DB9FF',
           },
         },

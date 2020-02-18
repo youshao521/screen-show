@@ -4,7 +4,7 @@
       <div class='headTab'>
         <p>本月安全得分</p>
         <div class='showNum'>
-          <span>{{monthRes.safePoint.toFixed(2)}}</span>
+          <span class='bold'>{{monthRes.safePoint.toFixed(2)}}</span>
           <img
             src='../../assets/safe/upOrange.svg'
             v-if='monthRes.safePoint>monthRes.lastSafePoint'
@@ -23,7 +23,7 @@
           class='showNum'
           style='color: #6DD230;'
         >
-          <span>{{monthRes.envProtectionPer}}</span>
+          <span class='bold'>{{monthRes.envProtectionPer}}</span>
           <img
             src='../../assets/safe/upGreen.svg'
             v-if='monthRes.envProtectionPer>monthRes.lastEnvProtectionPer'
@@ -76,7 +76,7 @@ export default {
           text: '本月各部门安全气象分分析',
           textStyle: {
             fontSize: 20,
-            fontWeight: 'lighter',
+            // fontWeight: 'lighter',
             color: '#E0EBFE',
           },
         },

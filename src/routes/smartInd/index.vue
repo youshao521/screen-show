@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class='leftBanner'>
-          <div class='name bold'>高空瞭望</div>
+          <div class='name bold'>车间内景</div>
           <div class='more'>更多</div>
         </div>
       </div>

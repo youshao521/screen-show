@@ -51,6 +51,7 @@ export default {
               }
             }
           },
+          symbol: 'circle',
           symbolSize: 10,
           data: page.faultCount.yAxisValue,
           type: 'line'

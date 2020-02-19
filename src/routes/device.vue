@@ -4,7 +4,7 @@
     <div class="mainTitle">
       <div class="titleContent">
         <i class="base-title-icon left"/>
-        <span class="base-content">设备综合运维管理驾驶舱</span>
+        <span class="base-content">工厂设备运行管理驾驶舱</span>
         <i class="base-title-icon right"/>
       </div>
     </div>

@@ -1,7 +1,7 @@
 
 <template>
   <div :style="{ height: '55%' }">
-    <div class="sub-title">仪表设备分析</div>
+    <div class="sub-title" :style="{ padding: '0 12px' }">仪表设备分析</div>
     <div class="analysis-content">
       <div class="power-machine">
         <div class="title">

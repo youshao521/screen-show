@@ -52,7 +52,13 @@ export default {
         ],
         yAxis: [
           {
+            axisLabel: {
+              formatter: '{value} 万元'
+            },
             type: 'value',
+            nameTextStyle: {
+              padding: -5
+            },
             splitLine: {
               show: true,
               lineStyle: {

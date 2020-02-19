@@ -1,7 +1,7 @@
 
 <template>
   <div class="table" :style="{ height: '45%' }">
-    <div class="sub-title">机柜故障记录</div>
+    <div class="sub-title" :style="{ padding: '0 12px' }">机柜故障记录</div>
     <div class="more">
       <span>更多</span>
     </div>

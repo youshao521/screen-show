@@ -1,6 +1,6 @@
 <template>
   <div class='block5'>
-    <p class='smtitle'>样品分析</p>
+    <p class='smtitle bold'>样品分析</p>
     <div class='itemsBox'>
       <div class='chartBox'>
         <div class='chartTitle'>{{sampleAnalysis.times}}次加样</div>

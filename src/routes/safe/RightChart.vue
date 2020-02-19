@@ -51,7 +51,7 @@ export default {
             text: x.name,
             textStyle: {
               fontSize: 20,
-              fontWeight: 'lighter',
+              // fontWeight: 'lighter',
               color: '#9DB9FF',
             },
           },
@@ -124,7 +124,7 @@ export default {
             left: 'center',
             textStyle: {
               fontSize: 20,
-              fontWeight: 'lighter',
+              // fontWeight: 'lighter',
               color: '#9DB9FF',
             },
           },

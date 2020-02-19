@@ -1,8 +1,8 @@
 <template>
   <div class='box'>
-    <p class='title'>生产管控一体化驾驶舱</p>
+    <p class='topTitle bold'>工厂生产操作管理驾驶舱</p>
     <div class='content'>
-     <div class='leftCont'>
+      <div class='leftCont'>
         <ImportRunOptsModule :list='runOpts' />
         <ActionRunningModule :list='actionRunning' />
       </div>
@@ -77,23 +77,23 @@ export default {
     },
     random3() {
       this.centerData[0].num += 1
-      this.centerData[1].num = mock.centerData[1].num + getR(-.5,.5)
-      this.centerData[2].num += 0.19 
+      this.centerData[1].num = mock.centerData[1].num + getR(-0.5, 0.5)
+      this.centerData[2].num += 0.19
       this.centerData[3].num += 0.17
-			console.log(this.centerData)
+      // console.log(this.centerData)
     },
-		random4(data) {
-			return data.map(x => {
-				let temp = x
-				if(temp.val !==undefined) {
-					temp = {
-						...x,
-						val: x.val + getR()
-					}
-				}
-				return temp
-			})
-		},
+    random4(data) {
+      return data.map(x => {
+        let temp = x
+        if (temp.val !== undefined) {
+          temp = {
+            ...x,
+            val: x.val + getR(),
+          }
+        }
+        return temp
+      })
+    },
     timer1() {
       this.runOpts = this.random1(mock.runOpts)
     },
@@ -103,9 +103,9 @@ export default {
     timer3() {
       this.random3()
     },
-		timer4() {
-			this.centerPoints = this.random4(mock.centerPoints)
-		}
+    timer4() {
+      this.centerPoints = this.random4(mock.centerPoints)
+    },
   },
   watch: {
     centerData: {
@@ -126,12 +126,12 @@ export default {
       },
       deep: true,
     },
-		centerPoints: {
-			handler() {
-			  setTimeout(this.timer4, 5 * 1000)
-			},
-			deep: true,
-		}
+    centerPoints: {
+      handler() {
+        setTimeout(this.timer4, 5 * 1000)
+      },
+      deep: true,
+    },
   },
   destroyed() {
     // console.log(this.timer)

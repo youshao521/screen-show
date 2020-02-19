@@ -1,6 +1,6 @@
 <template>
   <div class='box'>
-    <p class='title'>智慧工业园区运维驾驶舱</p>
+    <p class='topTitle bold'>智慧工业园区运维驾驶舱</p>
     <div class='content'>
       <div class='leftCont'>
         <div class='iconBox'>
@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class='leftBanner'>
-          <div class='name'>高空瞭望</div>
+          <div class='name bold'>车间内景</div>
           <div class='more'>更多</div>
         </div>
       </div>
@@ -69,7 +69,7 @@
               <p class='itemName'>{{x.name}}</p>
               <p
                 :style='"color:"+x.color'
-                class='itemVal'
+                class='itemVal bold'
               >{{x.val}}</p>
             </div>
             <div v-else>
@@ -86,7 +86,7 @@
           >
             <p
               :style='"background-image: url(../../assets/smartInd/"+pointsName[i]+".png);"'
-              class='tabNum'
+              class='tabNum bold'
             >{{x}}</p>
             <p class='tabName'>{{pointsName[i]}}</p>
           </div>
@@ -96,7 +96,6 @@
             alt
             class='actionBtn'
             src='../../assets/smartInd/缩放.png'
-          />
           />
           <div
             :style='{
@@ -135,7 +134,7 @@
         <div class='rHead'>
           <p class='headTitle'>空气质量检测</p>
           <div class='itemBox'>
-            <a-progress
+            <!-- <a-progress
               :percent='AQdata[0]'
               :strokeWidth='10'
               :width='145'
@@ -146,7 +145,10 @@
                 <p style='margin: 12px 0 4px;font-size: 48px;color:#fff;'>{{percent}}</p>
                 <span style='font-size: 18px;color:#fff;'>优</span>
               </template>
-            </a-progress>
+            </a-progress>-->
+            <div class='chartCont'>
+              <Chart :options='options' />
+            </div>
             <div class='dataList'>
               <div
                 class='dataItem'
@@ -165,7 +167,7 @@
           </div>
         </div>
         <div class='rTips'>
-          公用工程能耗
+          <span class='bold'>公用工程能耗</span>
           <p v-for='x in energyCostTip'>
             <span>{{x.name}}</span>
             {{x.val}}
@@ -201,7 +203,7 @@
           </div>
         </div>
         <div class='noticeBox'>
-          <p class='notiTitle'>通知公告</p>
+          <p class='notiTitle bold'>通知公告</p>
           <div
             class='noticeList'
             v-for='x in noticeList'
@@ -224,6 +226,7 @@ import EnergyCost from './EnergyCost'
 import HiddenDanger from './HiddenDanger'
 import EnterType from './EnterType'
 import SafetyIndex from './SafetyIndex'
+import Chart from '../../components/chart/commonChart'
 import {
   noticeList,
   energyList,
@@ -241,6 +244,7 @@ import {
 export default {
   name: 'ProductionControl',
   components: {
+    Chart,
     Top3,
     ComplainChart,
     EnergyCost,
@@ -250,6 +254,7 @@ export default {
   },
   data() {
     return {
+      options: {},
       noticeList,
       energyList,
       energyCostTip,
@@ -274,6 +279,56 @@ export default {
       this.pointChange()
       this.airQualityChange()
     },
+    renderOptions(data) {
+      const passRate = data[0]
+      const options = {
+        title: {
+          show: true,
+          text: passRate,
+          subtext: '优',
+          top: '28%',
+          left: 'center',
+          textStyle: {
+            fontSize: 48,
+            color: '#fff',
+            fontWeight: 'normal',
+            lineHeight: 40,
+          },
+          subtextStyle: {
+            fontSize: 18,
+            color: '#fff',
+            fontWeight: 'normal',
+            lineHeight: 10,
+          },
+        },
+        series: {
+          name: '',
+          type: 'pie',
+          radius: ['82%', '100%'],
+          hoverAnimation: false,
+          labelLine: {
+            normal: {
+              show: false,
+            },
+          },
+          data: [
+            {
+              value: passRate,
+              itemStyle: {
+                color: '#2795E3',
+              },
+            },
+            {
+              value: 100 - passRate,
+              itemStyle: {
+                color: 'rgb(41, 55, 79)',
+              },
+            },
+          ],
+        },
+      }
+      return options
+    },
     pointChange() {
       this.point = points[this.pointIndex]
       setInterval(() => {
@@ -287,6 +342,7 @@ export default {
     },
     airQualityChange() {
       this.AQdata = airQuality[this.AQindex]
+      this.options = this.renderOptions(this.AQdata)
       setInterval(() => {
         if (this.AQindex < airQuality.length - 1) {
           this.AQindex += 1
@@ -294,6 +350,7 @@ export default {
           this.AQindex = 0
         }
         this.AQdata = airQuality[this.AQindex]
+        this.options = this.renderOptions(this.AQdata)
       }, 60 * 1000)
     },
   },

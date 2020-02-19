@@ -1,6 +1,6 @@
 <template>
   <div class='block2'>
-    <p class='smtitle'>操作运行</p>
+    <p class='smtitle bold'>操作运行</p>
     <div class='itemsList'>
       <div
         :key='i.name'

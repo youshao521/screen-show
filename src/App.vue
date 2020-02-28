@@ -3,8 +3,10 @@
     <router-view />
   </div>
 </template>
-
-<style lang="less">
-@import './App.less';
-</style>
-
+<script>
+import './App.less';
+export default {
+  data() {
+  }
+}
+</script>

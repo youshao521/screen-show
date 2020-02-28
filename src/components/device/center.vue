@@ -68,7 +68,7 @@ export default {
         centeredSlides: true,
         loop: true,
         autoplay: {
-          delay: 60 * 1000,
+          delay: 3 * 1000,
           disableOnInteraction: false
         },
         pagination: {
@@ -83,7 +83,7 @@ export default {
     }
   },
   mounted() {
-    this.wanna = setInterval(this.changeValue, 60 * 1000);
+    this.wanna = setInterval(this.changeValue, 3 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);

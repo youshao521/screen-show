@@ -50,7 +50,7 @@ export default {
     };
   },
   mounted() {
-    this.wanna = setInterval(this.changeValue, 60 * 1000);
+    this.wanna = setInterval(this.changeValue, 2 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);
@@ -58,6 +58,9 @@ export default {
   methods: {
     changeValue() {
       this.useValue = this.useValue + parseInt(this.useValue * 0.000003);
+      if (this.useValue > 999999) {
+        this.useValue = page.mapData.useValue;
+      }
     }
   }
 }

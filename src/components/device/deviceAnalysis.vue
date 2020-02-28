@@ -90,7 +90,7 @@ export default {
     };
   },
   mounted() {
-    this.wanna = setInterval(this.choice, 60 * 1000);
+    this.wanna = setInterval(this.choice, 3 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);

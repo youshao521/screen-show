@@ -56,7 +56,7 @@ export default {
     };
   },
   mounted() {
-    this.wanna = setInterval(this.changeValue, 60 * 24 * 1000);
+    this.wanna = setInterval(this.changeValue, 3 * 1000);
   },
   beforeDestroy() {
   },

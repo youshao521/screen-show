@@ -65,7 +65,7 @@ export default {
   },
   mounted() {
     // this.changeValue();
-    this.wanna = setInterval(this.changeValue, 60 * 1000);
+    this.wanna = setInterval(this.changeValue, 2 * 1000);
   },
   beforeDestroy() {
     clearInterval(this.wanna);

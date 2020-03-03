@@ -85,7 +85,7 @@ export default {
       }
     })
     // console.log(this.tableData)
-    setInterval(() => {
+    this.wanna = setInterval(() => {
       if (this.index < this.tableData.length - 1) {
         this.index += 1
       } else {
@@ -103,6 +103,12 @@ export default {
       // console.log(this.showData)
     }, 60 * 60 * 1000)
     this.options = this.renderOptions()
+  },
+  beforeDestroy() {
+    clearInterval(this.wanna);
+    this.tableData = null;
+    this.showData = null;
+    this.options = null;
   },
   methods: {
     shuffle(arr) {

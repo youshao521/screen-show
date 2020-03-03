@@ -43,6 +43,10 @@ export default {
     this.pieOptions = this.renderOptions(monthlyPieData)
     this.barOptions = this.renderBarOptions(monthlyBarData)
   },
+  beforeDestroy() {
+    this.pieOptions = null;
+    this.barOptions = null;
+  },
   methods: {
     renderBarOptions(data) {
       return data.map(x => {

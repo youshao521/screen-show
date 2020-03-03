@@ -14,9 +14,21 @@ export default {
   mounted() {
     this.initLineChart();
   },
+  beforeDestroy() {
+    let dcharts = echarts.getInstanceByDom(this.$refs.lineChart)
+    if (dcharts) {
+      echarts.dispose(dcharts)
+    }
+  },
   methods: {
     initLineChart() {
-      let lineChart = echarts.init(this.$refs.lineChart);
+      if (!this.$refs.lineChart) {
+        return;
+      }
+      let lineChart = echarts.getInstanceByDom(this.$refs.lineChart);
+      if (!lineChart) {
+        lineChart = echarts.init(this.$refs.lineChart);
+      }
       lineChart.setOption({
         textStyle: {
           color: '#CFDDFF'

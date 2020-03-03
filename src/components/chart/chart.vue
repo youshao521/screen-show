@@ -35,6 +35,13 @@ export default {
   mounted() {
     this.initChart()
   },
+  beforeDestroy() {
+    let dcharts = echarts.getInstanceByDom(this.$refs.chart)
+    if (dcharts) {
+      echarts.dispose(dcharts)
+    }
+    this.chart = null;
+  },
   watch: {
     options: {
       handler(curData) {
@@ -45,7 +52,13 @@ export default {
   },
   methods: {
     initChart() {
-      this.chart = echarts.init(this.$refs.chart)
+      if (!this.$refs.chart) {
+        return;
+      }
+      this.chart = echarts.getInstanceByDom(this.$refs.chart);
+      if (!this.chart) {
+        this.chart = echarts.init(this.$refs.chart);
+      }
       this.renderData(this.options)
     },
     renderData(options) {

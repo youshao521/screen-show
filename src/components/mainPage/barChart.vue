@@ -14,9 +14,21 @@ export default {
   mounted() {
     this.initBarChart();
   },
+  beforeDestroy() {
+    let dcharts = echarts.getInstanceByDom(this.$refs.barChart)
+    if (dcharts) {
+      echarts.dispose(dcharts)
+    }
+  },
   methods: {
     initBarChart() {
-      let barChart = echarts.init(this.$refs.barChart);
+      if (!this.$refs.barChart) {
+        return;
+      }
+      let barChart = echarts.getInstanceByDom(this.$refs.barChart);
+      if (!barChart) {
+        barChart = echarts.init(this.$refs.barChart);
+      }
       barChart.setOption({
         color: ['rgba(207, 221, 255, 0.3)', new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
           offset: 0,

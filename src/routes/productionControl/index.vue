@@ -49,6 +49,11 @@ export default {
   mounted() {
     this.init()
   },
+  beforeDestroy() {
+    this.runOpts = null;
+    this.actionRunning = null;
+    this.centerPoints = null;
+  },
   methods: {
     init() {
       this.timer1()

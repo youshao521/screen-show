@@ -61,11 +61,15 @@ export default {
   mounted() {
     // console.log(this.showData)
     this.options = this.renderOptions()
-    setInterval(() => {
+    this.wanna = setInterval(() => {
       this.index = this.index === this.list.length - 1 ? 0 : this.index + 1
       this.showData = this.list[this.index]
       this.options = this.renderOptions()
     }, 10 * 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.wanna);
+    this.options = null;
   },
   methods: {
     renderOptions() {

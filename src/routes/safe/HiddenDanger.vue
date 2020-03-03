@@ -24,6 +24,9 @@ export default {
   mounted() {
     this.options = this.renderOptions()
   },
+  beforeDestroy() {
+    this.options = null;
+  },
   methods: {
     renderOptions() {
       const options = {

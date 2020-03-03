@@ -59,6 +59,8 @@ export default {
     this.wanna = setInterval(this.changeValue, 3 * 1000);
   },
   beforeDestroy() {
+    clearInterval(this.wanna);
+    this.dataSource = null;
   },
   methods: {
     changeValue() {

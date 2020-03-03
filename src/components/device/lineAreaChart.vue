@@ -14,9 +14,21 @@ export default {
   mounted() {
     this.initLineAreaChart();
   },
+  beforeDestroy() {
+    let dcharts = echarts.getInstanceByDom(this.$refs.lineAreaChart)
+    if (dcharts) {
+      echarts.dispose(dcharts)
+    }
+  },
   methods: {
     initLineAreaChart() {
-      let lineAreaChart = echarts.init(this.$refs.lineAreaChart);
+      if (!this.$refs.lineAreaChart) {
+        return;
+      }
+      let lineAreaChart = echarts.getInstanceByDom(this.$refs.lineAreaChart);
+      if (!lineAreaChart) {
+        lineAreaChart = echarts.init(this.$refs.lineAreaChart);
+      }
       lineAreaChart.setOption({
         title: {
           left: 'center',

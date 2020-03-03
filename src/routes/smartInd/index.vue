@@ -242,7 +242,7 @@ import {
   energyCostTip,
 } from '../../mock/smartInd_mock'
 export default {
-  name: 'ProductionControl',
+  name: 'SmartInd',
   components: {
     Chart,
     Top3,
@@ -273,6 +273,13 @@ export default {
   },
   mounted() {
     this.init()
+  },
+  beforeDestroy() {
+    clearInterval(this.pointInterval);
+    clearInterval(this.airInterval);
+    this.AQdata = null;
+    this.options = null;
+    this.point = null;
   },
   methods: {
     init() {
@@ -331,7 +338,7 @@ export default {
     },
     pointChange() {
       this.point = points[this.pointIndex]
-      setInterval(() => {
+      this.pointInterval = setInterval(() => {
         if (this.pointIndex < points.length - 1) {
           this.pointIndex += 1
         } else {
@@ -343,7 +350,7 @@ export default {
     airQualityChange() {
       this.AQdata = airQuality[this.AQindex]
       this.options = this.renderOptions(this.AQdata)
-      setInterval(() => {
+      this.airInterval = setInterval(() => {
         if (this.AQindex < airQuality.length - 1) {
           this.AQindex += 1
         } else {

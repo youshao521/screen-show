@@ -21,9 +21,21 @@ export default {
   mounted() {
     this.initPieChart();
   },
+  beforeDestroy() {
+    let dcharts = echarts.getInstanceByDom(this.$refs.pieChart)
+    if (dcharts) {
+      echarts.dispose(dcharts)
+    }
+  },
   methods: {
     initPieChart() {
-      let pieChart = echarts.init(this.$refs.pieChart);
+      if (!this.$refs.pieChart) {
+        return;
+      }
+      let pieChart = echarts.getInstanceByDom(this.$refs.pieChart);
+      if (!pieChart) {
+        pieChart = echarts.init(this.$refs.pieChart);
+      }
       pieChart.setOption({
         color: ['#3B30FD', '#D0214C', '#878787', '#6CF8C7'],
         legend: {
